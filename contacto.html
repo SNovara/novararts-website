@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | NovarArts</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+
+<header>
+  <a href="index.html" class="logo">Novar<span class="accent">Arts</span></a>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="articulos.html">Artículos</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Contacto -->
+  <main class="contacto">
+    <section class="contacto-contenido">
+      <h2 class="titulo-principal">Contacto</h2>
+      <p>¿Querés ponerte en contacto conmigo? Escribime y te responderé a la brevedad.</p>
+
+      <form id="contact-form" action="https://formspree.io/f/xrbonrak" method="POST" class="form-contacto">
+
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="name" required>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="message" rows="5" required></textarea>
+
+        <button class="boton-contacto" type="submit">Enviar mensaje</button>
+
+      </form>
+	<p id="form-status" class="form-status"></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-about">
+      <p>© 2025 <strong>NovarArts</strong> — Un proyecto independiente creado por Santiago Novara. Haz click <a href="sobre.html">aquí</a> para saber más sobre mí.</p>
+    </div>
+  </footer>
+
+<script>
+  (function() {
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+
+    if (!form) {
+      console.error("No se encontró el formulario #contact-form");
+      return;
+    }
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      // Mostrar estado de envío
+      status.style.display = "block";
+      status.classList.remove('success', 'error');
+      status.textContent = "⏳ Enviando...";
+
+      const data = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            'Accept': 'application/json'   // importante para Formspree
+          },
+          redirect: 'follow'
+        });
+
+        // Logging para depuración
+        console.log('Fetch response status:', response.status);
+        // Intentamos parsear JSON si lo hay
+        let body = null;
+        try { body = await response.json(); console.log('Response JSON:', body); } catch(e) { /* no JSON */ }
+
+        // Aceptamos respuestas OK (200-299). Formspree debería devolver 200 con Accept:application/json
+        if (response.ok) {
+          // Ocultar formulario y el texto introductorio
+          form.style.display = "none";
+          const introText = document.querySelector(".contacto-contenido p");
+          if (introText) introText.style.display = "none";
+
+          // Mostrar mensaje de éxito con botón que redirige limpiamente
+          status.innerHTML = `
+            <div class="success-message">
+              <p>✅ ¡Tu mensaje fue enviado! Gracias por contactarte conmigo.</p>
+              <button id="back-home-btn" class="back-home-btn">Volver al inicio</button>
+            </div>
+          `;
+          status.classList.add('success');
+
+          // Añadimos el handler al botón (ya existe porque acabamos de insertar el HTML)
+          const backBtn = document.getElementById("back-home-btn");
+          if (backBtn) {
+            backBtn.addEventListener("click", () => {
+              // redirección limpia, fuerza carga de index.html
+              window.location.href = "index.html";
+            });
+          }
+
+          // limpiar form por si acaso
+          form.reset();
+        } else {
+          // Mostrar detalle si viene en body
+          const errorText = (body && (body.error || body.message)) ? (body.error || body.message) : "Ocurrió un error inesperado.";
+          status.textContent = "❌ " + errorText;
+          status.classList.add('error');
+          console.error('Formspree response not OK:', response.status, body);
+        }
+
+      } catch (err) {
+        // Error de red / CORS / etc.
+        status.textContent = "❌ No se pudo enviar. Revisa la consola del navegador.";
+        status.classList.add('error');
+        console.error('Fetch error:', err);
+      }
+    });
+  })();
+</script>
+
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

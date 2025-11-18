@@ -1,0 +1,681 @@
+/* ==== FUENTES Y COLORES ==== */
+:root {
+  --red: #e60012;
+  --gray: #444;
+  --light-gray: #f7f7f7;
+  --font-title: 'Bangers', cursive;
+  --font-body: 'Rubik', sans-serif;
+}
+
+/* ==== RESETEO ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: white;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* ==== FIX FOOTER (mantener abajo) ==== */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* ==== LOGO / HEADER / NAV ==== */
+.logo {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: var(--red);
+  text-decoration: none;
+}
+
+/* LOGO — “Arts” del header (rojo original) */
+.logo-arts {
+  color: var(--red);
+}
+
+.logo:hover {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  border-bottom: 2px solid var(--light-gray);
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  gap: 1.5rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--red);
+}
+
+/* ==== BUSCADOR HEADER ==== */
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 50px;
+  padding: 0.3rem 0.6rem;
+  width: 220px;
+  margin: 0 auto;
+  position: relative;
+  left: 52px;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 0.95rem;
+  font-family: 'Rubik', sans-serif;
+  color: #333;
+  width: 130px;
+  transition: width 0.3s ease;
+}
+
+.search-bar input::placeholder {
+  color: #888;
+}
+
+.search-bar button {
+  background: white;
+  border: 1px solid #ddd;
+  color: var(--red);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-left: 40px;
+}
+
+.search-bar:focus-within {
+  box-shadow: 0 0 6px rgba(230, 0, 18, 0.2);
+}
+
+@media (max-width: 800px) {
+  .search-bar {
+    display: none;
+  }
+}
+
+/* ==== HERO ==== */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.titulo-bienvenida {
+  font-family: var(--font-title); 
+  font-size: 3rem;
+  margin-bottom: 20px;
+margin-top: -30px;
+  color: var(--gray);
+  text-align: center;
+
+  /* >>> SOMBRA SUAVE ESTILO ORIGINAL <<< */
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.titulo-novar {
+  color: #111;
+  font-weight: 700;
+}
+
+.titulo-arts {
+  color: var(--red);
+  font-weight: 700;
+}
+
+.hero p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Estilo para el texto de la página de inicio */
+.texto-inicio {
+text-align: justify;
+  max-width: 700px;   /* restringe el ancho máximo */
+  margin: 0 auto;      /* centra el párrafo horizontalmente */
+  line-height: 1.6;    /* mejora la lectura */
+  font-size: 1.1em;    /* tamaño de letra ligeramente más grande */
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+margin-top: -15px
+}
+
+.texto-inicio p {
+  margin-bottom: 22px; /* espacio entre párrafos */
+}
+
+/* Hipervínculos del inicio */
+.texto-inicio a {
+  text-decoration: none;     /* Quita el subrayado */
+}
+
+.texto-inicio a:hover {
+  text-decoration: underline; /* Opcional: subrayado solo al pasar el mouse */
+}
+
+/* ==== SECCIÓN ARTÍCULOS ==== */
+.articulos {
+  max-width: 1100px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.intro-articulos {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro-articulos h1 {
+  font-family: var(--font-title);
+  font-size: 3rem;
+  color: var(--red);
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.intro-articulos p {
+  font-family: var(--font-body);
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.articulos-container {
+  padding: 40px 0;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.articulos-grid {
+  display: grid;
+  gap: 24px;
+  justify-content: center;
+  grid-template-columns: repeat(3, 300px);
+  margin: 0 auto;
+}
+
+@media (max-width: 950px) {
+  .articulos-grid {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media (max-width: 660px) {
+  .articulos-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 0 12px;
+  }
+}
+
+/* ==== TARJETAS DE ARTÍCULOS ==== */
+.articulo-card {
+  background-color: #fff;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 300px;
+  padding: 1.6rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.articulo-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.12);
+}
+
+.articulo-etiqueta {
+  display: inline-block;
+  width: fit-content;
+  background-color: var(--red);
+  color: white;
+  font-weight: 800;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  padding: 0.28rem 0.6rem;
+  border-radius: 8px;
+  margin-bottom: 0.85rem;
+}
+
+.articulo-thumb {
+  width: 100%;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.articulo-card h3 {
+  font-size: 1.50rem;
+  color: #111;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 0.7rem;
+}
+
+.articulo-card p {
+  color: #555;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin-bottom: 1.1rem;
+}
+
+.articulo-card a {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-flex;
+  gap: 6px;
+  transition: color 0.18s ease;
+}
+
+.articulo-card a::after {
+  content: "→";
+  transition: transform 0.18s ease;
+}
+
+.articulo-card a:hover::after {
+  transform: translateX(4px);
+}
+
+/* ==== PAGINACIÓN ==== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 8px;
+}
+
+.pagination-btn,
+.page-number {
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pagination-btn:hover,
+.page-number:hover {
+  background-color: #ccc;
+}
+
+.page-number.active {
+  background-color: #333;
+  color: white;
+}
+
+/* ==== FADE ==== */
+#articulos-list {
+  opacity: 1;
+  transition: opacity 0.38s ease;
+}
+
+#articulos-list.fade-out {
+  opacity: 0;
+}
+
+/* ==== POSTS (Index) ==== */
+.posts {
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.post {
+  display: flex;
+  gap: 1.5rem;
+  background: var(--light-gray);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.post img {
+  width: 160px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+.post-content h3 a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background: var(--red);
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+footer .footer-about a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer .footer-about a:hover {
+  color: #ffdede;
+}
+
+/* ==== SOBRE / CONTACTO ==== */
+.about-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  font-size: 18px;
+  color: #333;
+}
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0.8rem;
+  background: #fafafa;
+}
+
+/* ==== CONTACTO – ESTILO ADAPTADO A TARJETAS ==== */
+.contacto-contenido {
+  background: #fff;
+  border-radius: 14px;                       /* igual que las tarjetas de artículos */
+  border: 1px solid #eee;                     /* borde nítido */
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);   /* sombra suave */
+  padding: 1.2rem;
+  max-width: 460px;
+}
+
+.contacto-contenido h2 {
+  color: var(--red);
+  text-align: center;
+  font-family: var(--font-body) !important;
+  font-weight: 700;
+margin-bottom: 0.6rem;
+font-size: 1.8rem;
+}
+
+.contacto-contenido form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.8rem;
+}
+
+.contacto-contenido label {
+  font-weight: 600;
+  margin-bottom: 0rem;
+  display: block;
+  color: #333;
+font-size: 0.85rem;
+}
+
+.contacto-contenido input,
+.contacto-contenido textarea {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contacto-contenido textarea {
+  min-height: 135px;
+  resize: vertical;
+}
+
+.contacto-contenido input:focus,
+.contacto-contenido textarea:focus {
+  border-color: var(--red);
+  box-shadow: 0 0 6px rgba(230,0,18,0.3);
+  outline: none;
+}
+
+.boton-contacto {
+  background: var(--red);
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+margin-top: 0.6rem;
+}
+
+.boton-contacto:hover {
+  background: #c40000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 16px rgba(0,0,0,0.18);
+}
+
+/* ==== SOBRE MÍ – NUEVO ESTILO ==== */
+.sobre {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.sobre-contenido {
+  max-width: 900px;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.sobre-contenido p {
+  margin-bottom: 1.5rem;
+}
+
+/* ==== RESPONSIVE FINO ==== */
+@media (max-width: 660px) {
+  .articulo-card {
+    max-width: 100%;
+    padding: 1.2rem;
+  }
+  .post img {
+    height: 90px;
+  }
+  .intro-articulos h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ==== Corrección FINAL del logo del header ==== */
+header .logo {
+  color: #c40000; /* rojo intenso */
+}
+
+header .logo .accent {
+  color: #000 !important; /* fuerza el color negro */
+}
+
+/* Botón "Volver al inicio" ajustado */
+.back-home-btn {
+  background: #999; /* gris elegante en vez de rojo */
+  color: white;
+  padding: 0.45rem 1rem; /* más chico */
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem; /* ligeramente más chico */
+  font-weight: 700;
+  cursor: pointer;
+
+  width: auto;
+  display: inline-block;
+  margin-top: 4rem; /* lo bajamos más */
+
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+}
+
+.success-message {
+  text-align: center;
+}
+
+/* --- Estilo para artículos completos --- */
+
+.articulo-completo {
+  max-width: 820px;
+  margin: 40px auto;
+  padding: 0 20px;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Categoría arriba del título */
+.articulo-completo {
+  background: #fff;
+  border-radius: 14px;                    
+  border: 1px solid #eee;                 
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  padding: 2.5rem;
+  max-width: 1000px;
+  margin: 2rem auto; /* centra el bloque */
+}
+
+/* Título centrado */
+.articulo-completo h1 {
+  text-align: center;
+  font-size: 2rem;
+color: #222;
+  margin: 15px 0 20px 0;
+}
+
+/* Descripción corta separada */
+.descripcion-corta {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #555;
+  margin: -10px auto 35px auto;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Espaciado de texto del artículo */
+.articulo-completo article p {
+  margin-bottom: 22px;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+
+/* Subtítulos (h2, h3) */
+.articulo-completo h2 {
+  margin-top: 40px;
+  font-size: 1.2rem;
+}
+
+.articulo-completo h3 {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+/* Imágenes dentro de artículos */
+.articulo-imagen {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.articulo-imagen img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
+}
+
+.articulo-imagen figcaption {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 8px;
+  font-style: italic;
+  text-align: center;
+}
+
+.articulo-imagen.chica img {
+  max-width: 90%;   /* por ejemplo */
+}
+
+/* Texto temporal de la sección de proyectos */
+.texto-temporal-proyectos {
+  font-size: 2em;    /* tamaño de letra ligeramente más grande */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
