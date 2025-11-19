@@ -521,22 +521,23 @@ margin-top: 0.6rem;
 .sobre {
   display: flex;
   justify-content: center;
-  padding: 3rem 1rem;
+  padding: 1.9rem 1rem;
 }
 
 .sobre-contenido {
-  max-width: 900px;
+  max-width: 750px;
   background: #fff;
-  padding: 2.5rem;
+  padding: 1.8rem;
   border-radius: 12px;
   border: 1px solid #ddd;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.6;
+text-align: justify;
 }
 
 .sobre-contenido p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 /* ==== RESPONSIVE FINO ==== */
