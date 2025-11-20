@@ -680,3 +680,163 @@ color: #222;
   width: 100%;
   text-align: center;
 }
+
+/* =========================================================
+   RESPONSIVE GLOBAL — para toda la web
+   ========================================================= */
+
+/* 1️⃣  Tablets y pantallas medianas */
+@media (max-width: 900px) {
+
+  header {
+    padding: 1rem 1.4rem;
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .titulo-bienvenida {
+    font-size: 2.4rem;
+  }
+
+  .texto-inicio {
+    padding: 1.8rem;
+    font-size: 1rem;
+  }
+
+  .articulo-completo {
+    padding: 2rem;
+  }
+}
+
+/* 2️⃣  Móviles estándar */
+@media (max-width: 660px) {
+
+  /* ----- Header ----- */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .search-bar {
+    display: none !important;
+  }
+
+  header {
+    gap: 1rem;
+  }
+
+  /* ----- Hero ----- */
+  .titulo-bienvenida {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* ----- Inicio ----- */
+  .texto-inicio {
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+
+  /* ----- Artículos (grid/carta) ----- */
+  .articulos-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px;
+  }
+
+  .articulo-card {
+    max-width: 100%;
+    padding: 1.1rem !important;
+  }
+
+  .articulo-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .articulo-card p {
+    font-size: 0.95rem;
+  }
+
+  /* ----- Artículo completo ----- */
+  .articulo-completo {
+    padding: 1.6rem;
+    margin: 1rem auto;
+  }
+
+  .articulo-completo h1 {
+    font-size: 1.6rem;
+  }
+
+  .descripcion-corta {
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+  }
+
+  .articulo-completo article p {
+    font-size: 1rem;
+  }
+
+  /* ----- Sobre mí / Contacto ----- */
+  .about-container,
+  .sobre-contenido,
+  .contacto-contenido {
+    padding: 1.2rem;
+    margin: 1.5rem;
+  }
+
+  .contacto {
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* 3️⃣  Móviles muy pequeños (iPhone SE, 360px) */
+@media (max-width: 480px) {
+
+  header {
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  .titulo-bienvenida {
+    font-size: 1.7rem;
+  }
+
+  .texto-inicio {
+    padding: 1rem;
+  }
+
+  .articulo-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .articulo-card {
+    padding: 1rem !important;
+  }
+
+  .articulo-completo h1 {
+    font-size: 1.4rem;
+  }
+
+  .articulo-completo {
+    padding: 1.3rem;
+  }
+}
