@@ -7,6 +7,6 @@ const articulos = [
     fecha: "2025-11-10",
     url: "articles/articulo1.html",
     tag: "Opinión",
-    thumb: "images/thumbnail-images/Nintendo_gray_logo.jpg",
+    thumb: "images/thumbnail-images/Nintendo-Switch.jpg",
   },
 ];
