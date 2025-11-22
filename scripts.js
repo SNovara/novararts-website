@@ -197,6 +197,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.querySelector(".hamburger");
+  const navMobile = document.querySelector(".nav-mobile");
+
+  if (hamburger && navMobile) {
+    hamburger.addEventListener("click", () => {
+      navMobile.classList.toggle("open");
+    });
+  }
+});
+
 // start
 iniciar();
 
