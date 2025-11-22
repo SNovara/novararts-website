@@ -29,12 +29,7 @@
 <header>
   <a href="index.html" class="logo">Novar<span class="accent">Arts</span></a>
 
-<form class="search-bar" action="articulos.html" method="GET">
-  <input type="text" name="q" placeholder="Buscar artículos...">
-  <button type="submit">🔍</button>
-</form>
-
-  <nav>
+  <nav class="nav-desktop">
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <li><a href="articulos.html">Artículos</a></li>
@@ -42,7 +37,20 @@
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
+
+<!-- Botón hamburguesa (solo aparece en mobile) -->
+  <div class="hamburger">☰</div>
 </header>
+
+<!-- Menú mobile oculto -->
+<nav class="nav-mobile">
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="articulos.html">Artículos</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+</nav>
 
     <main class="articulos-container">
         <div id="articulos-list" class="articulos-grid"></div>
