@@ -5,7 +5,7 @@ const articulos = [
     titulo: "10 juegos que faltan en Nintendo Switch",
     descripcion: "Un listado de juegos que quisiera ver en la híbrida",
     fecha: "2025-11-23",
-    url: "articles/10-juegos-que-faltan-en-switch.html",
+    url: "articles/10-juegos-que-faltan-en-switch_v2.html",
     tag: "Opinión",
     thumb: "images/thumbnail-images/Nintendo-Switch.jpg",
   },
