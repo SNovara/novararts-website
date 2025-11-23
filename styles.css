@@ -841,8 +841,25 @@ color: #222;
   }
 }
 
-.post-date {
-    font-size: 0.9rem;
+.article-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Ya deberías tener esto o algo similar */
+.category-tag {
+    background: #e60000;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.85rem;
+}
+
+.article-date {
+    font-size: 0.85rem;
     color: #777;
-    margin-bottom: 10px;
+    font-weight: 500;
 }
