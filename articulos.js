@@ -13,7 +13,7 @@ const articulos = [
     titulo: "La crisis oculta de Nintendo", /* ----- Publicado el 20/11/2025 ----- */
     descripcion: "Una verdad escondida detrás de sus éxitos más recientes.",
     fecha: "2025-11-20",
-    url: "articles/articulo1.html",
+    url: "articles/la-crisis-oculta-de-nintendo.html",
     tag: "Opinión",
     thumb: "images/thumbnail-images/Nintendo-Switch-2.png",
   },
