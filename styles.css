@@ -841,17 +841,20 @@ color: #222;
   }
 }
 
+.articulo-completo {
+  position: relative;
+}
+
 .article-date {
   position: absolute;
   top: 0;
   right: 0;
   font-size: 0.75rem;
   color: #555;
+  display: block;   /* ← ESTO ES LA CLAVE */
+  pointer-events: none;
 }
 
-.articulo-completo {
-  position: relative;
-}
 
 
 
