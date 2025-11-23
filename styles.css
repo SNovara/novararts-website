@@ -840,3 +840,9 @@ color: #222;
     padding: 1.3rem;
   }
 }
+
+.post-date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
