@@ -841,12 +841,17 @@ color: #222;
   }
 }
 
-.article-date-right {
-    align-items: right;
-    right: 20px;
-    top: 20px;
-    font-size: 0.75rem;
-    color: #888;
+.article-date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.75rem;
+  color: #555;
 }
+
+.articulo-completo {
+  position: relative;
+}
+
 
 
