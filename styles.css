@@ -841,22 +841,4 @@ color: #222;
   }
 }
 
-.article-date {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    /* 🔥 Saca el contenedor a full width */
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-
-    padding: 0 30px; /* margen interno opcional */
-    margin-bottom: 15px;
-}
-
-
 
