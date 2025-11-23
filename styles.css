@@ -842,6 +842,7 @@ color: #222;
 }
 
 .article-header-top {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -859,7 +860,7 @@ color: #222;
 }
 
 .article-date {
-    font-size: 0.85rem;
-    color: #777;
+    font-size: 0.75rem;
+    color: #999;
     font-weight: 500;
 }
