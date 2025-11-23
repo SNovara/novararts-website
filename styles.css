@@ -270,7 +270,6 @@ margin-top: -15px
 }
 
 .articulo-etiqueta {
-all: revert; /* 🔥 RESETEA cualquier estilo heredado del contenedor full-width */
   display: inline-block;
   width: fit-content;
   background-color: var(--red);
@@ -842,26 +841,16 @@ color: #222;
   }
 }
 
-.articulo-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    /* 🔥 Saca el contenedor a full width */
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-
-    padding: 0 30px; /* margen interno opcional */
-    margin-bottom: 15px;
-}
-
-/* Ajustes opcionales */
-.article-date {
+.article-date-right {
+    position: absolute;
+    right: 20px;
+    top: 20px;
     font-size: 0.75rem;
     color: #888;
 }
+
+.articulo-completo {
+    position: relative;
+}
+
 
