@@ -842,15 +842,20 @@ color: #222;
 }
 
 .article-date {
-  position: right;
-  top: 0;
-  right: 0;
-  font-size: 0.75rem;
-  color: #555;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-.articulo-completo {
-  position: relative;
+    /* 🔥 Saca el contenedor a full width */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    padding: 0 30px; /* margen interno opcional */
+    margin-bottom: 15px;
 }
 
 
