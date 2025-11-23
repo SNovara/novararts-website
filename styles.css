@@ -841,28 +841,27 @@ color: #222;
   }
 }
 
-.article-header-top {
-    position: relative;
-    left: 50%;
-    right: 50%;
-    width: 100vw;   /* ocupa todo el ancho real */
-    margin-left: -50vw;
-    margin-right: -50vw;
-    padding: 0 20px; /* margen interno opcional */
+.articulo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
 }
 
-/* Ya deberías tener esto o algo similar */
-.category-tag {
+/* Etiqueta Opinión (ya la deberías tener, pero por las dudas) */
+.articulo-etiqueta {
     background: #e60000;
     color: white;
     font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 4px 10px;
+    border-radius: 4px;
     font-size: 0.85rem;
 }
 
+/* Fecha */
 .article-date {
     font-size: 0.75rem;
-    color: #999;
-    font-weight: 500;
+    color: #888;
 }
+
