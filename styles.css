@@ -280,6 +280,9 @@ margin-top: -15px
   padding: 0.28rem 0.6rem;
   border-radius: 8px;
   margin-bottom: 0.85rem;
+
+  /* 🔥 Esto evita que se estire dentro del contenedor full-width */
+  flex-shrink: 0;
 }
 
 .articulo-thumb {
