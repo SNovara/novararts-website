@@ -4,7 +4,7 @@ const articulos = [
   {
     titulo: "La colección que perdí",
     descripcion: "Un recuerdo de lo que llegué a tener.",
-    fecha: "2025-11-23",
+    fecha: "2025-11-26",
     url: "articles/la-coleccion-que-perdi.html",
     tag: "Crónica",
     thumb: "images/thumbnail-images/Colección-consolas.png",
