@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "Las 15 mejores canciones de videojuegos",
+    descripcion: "Un listado de mis canciones favoritas.",
+    fecha: "2025-12-05",
+    url: "articles/las-mejores-canciones-de-videojuegos.html",
+    tag: "Ranking",
+    thumb: "images/thumbnail-images/Music-Note.png",
+  },
+  {
     titulo: "La colección que perdí",
     descripcion: "Un recuerdo de lo que llegué a tener.",
     fecha: "2025-11-26",
@@ -18,11 +26,11 @@ const articulos = [
     thumb: "images/thumbnail-images/Nintendo-Switch.jpg",
   },
   {
-    titulo: "La crisis oculta de Nintendo", /* ----- Publicado el 20/11/2025 ----- */
+    titulo: "La crisis oculta de Nintendo",
     descripcion: "Una verdad escondida detrás de sus éxitos más recientes.",
     fecha: "2025-11-20",
     url: "articles/la-crisis-oculta-de-nintendo.html",
-    tag: "Opinión",
+    tag: "Análisis",
     thumb: "images/thumbnail-images/Nintendo-Switch-2.png",
   },
 ];
