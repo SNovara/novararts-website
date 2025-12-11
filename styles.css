@@ -646,7 +646,7 @@ color: #222;
   text-align: justify;
 }
 
-.article .texto-pequeno p{
+.article .texto-pequeno {
     font-size: 0.45rem;   
     color: #555;         
     line-height: 1.4;
