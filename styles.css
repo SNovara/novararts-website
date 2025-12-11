@@ -646,6 +646,11 @@ color: #222;
   text-align: justify;
 }
 
+.article .texto-pequeno p{
+    font-size: 0.9rem;   
+    color: #555;         
+    line-height: 1.4;
+}
 
 /* Subtítulos (h2, h3) */
 .articulo-completo h2 {
@@ -869,10 +874,4 @@ color: #222;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.texto-pequeno {
-    font-size: 0.75rem;   
-    color: #555;         
-    line-height: 1.4;
 }
