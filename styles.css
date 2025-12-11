@@ -872,7 +872,7 @@ color: #222;
 }
 
 .texto-pequeno {
-    font-size: 0.85rem;   /* o 0.85rem si querés aún más pequeño */
-    color: #555;         /* opcional: un gris suave para diferenciar */
-    line-height: 1.4;    /* mantiene buena legibilidad */
+    font-size: 0.75rem;   
+    color: #555;         
+    line-height: 1.4;
 }
