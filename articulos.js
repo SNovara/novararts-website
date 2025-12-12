@@ -6,7 +6,7 @@ const articulos = [
     descripcion: "Gran noticia para los fans de la saga.",
     fecha: "2025-12-12",
     url: "articles/nuevo-mega-man-anunciado.html",
-    tag: "Ranking",
+    tag: "Noticia",
     thumb: "images/thumbnail-images/Mega-Man-Dual-Override.png",
   },
   {
