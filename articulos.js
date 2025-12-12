@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "¡Nuevo Mega Man recién anunciado!",
+    descripcion: "Gran noticia para los fans de la saga.",
+    fecha: "2025-12-12",
+    url: "articles/nuevo-mega-man-anunciado.html",
+    tag: "Ranking",
+    thumb: "images/thumbnail-images/Mega-Man-Dual-Override.png",
+  },
+  {
     titulo: "Las 15 mejores canciones de videojuegos",
     descripcion: "Un listado de mis canciones favoritas.",
     fecha: "2025-12-05",
