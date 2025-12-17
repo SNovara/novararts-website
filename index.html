@@ -41,6 +41,11 @@
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
+
+  <button class="hamburger" aria-label="Menu">
+    ☰
+  </button>
+
 </header>
 
 <!-- TODO LO DEL MEDIO AHORA ESTÁ DENTRO DE MAIN -->
@@ -79,6 +84,15 @@
 </footer>
 
 <script src="scripts.js"></script>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('.nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>

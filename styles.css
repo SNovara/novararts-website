@@ -869,3 +869,46 @@ color: #222;
   width: 100%;
   height: 100%;
 }
+
+/* --- DESKTOP (default) --- */
+.hamburger {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* --- MOBILE & TABLET --- */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px; /* ajustá según tu header */
+    right: 20px;
+
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+
+    display: none; /* clave */
+  }
+
+  .nav.active {
+    display: flex;
+  }
+}
+
