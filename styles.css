@@ -132,16 +132,9 @@ nav a.active {
 
 @media (max-width: 800px) {
   .search-bar {
-    display: block;
-    padding: 10px 16px;
-  }
-
-  .search-bar input {
-    width: 100%;
-    font-size: 16px;
+    display: none;
   }
 }
-
 
 /* ==== HERO ==== */
 .hero {
