@@ -33,7 +33,7 @@
 <header>
   <a href="index.html" class="logo">Novar<span class="accent">Arts</span></a>
 
-  <nav>
+  <nav class="nav">
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <li><a href="articulos.html">Artículos</a></li>
@@ -87,7 +87,7 @@
 
 <script>
   const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.nav');
+  const nav = document.querySelector('nav');
 
   hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');

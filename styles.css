@@ -912,3 +912,38 @@ color: #222;
   }
 }
 
+/* ===== MOBILE MENU ===== */
+@media (max-width: 768px) {
+
+  header {
+    position: relative;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 20px;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
