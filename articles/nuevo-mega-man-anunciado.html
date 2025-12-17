@@ -33,14 +33,19 @@
 <header>
   <a href="../index.html" class="logo">Novar<span class="accent">Arts</span></a>
 
-  <nav>
+  <nav class="nav">
     <ul>
-      <li><a href="../index.html">Inicio</a></li>
-      <li><a href="../articulos.html">Artículos</a></li>
-      <li><a href="../proyectos.html">Proyectos</a></li>
-      <li><a href="../contacto.html">Contacto</a></li>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="articulos.html">Artículos</a></li>
+      <li><a href="proyectos.html">Proyectos</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </nav>
+
+  <button class="hamburger" aria-label="Menu">
+    ☰
+  </button>
+
 </header>
 
 <div class="articulo-completo">
@@ -102,6 +107,15 @@
 </footer>
 
 <script src="scripts.js"></script>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
 
 </body>
 </html>
