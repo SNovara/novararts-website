@@ -980,3 +980,23 @@ color: #222;
   }
 }
 
+@media (max-width: 768px) {
+
+  .articulo-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .articulo-fecha {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 768px) {
+  .articulo-fecha {
+    opacity: 0.75;
+  }
+}
