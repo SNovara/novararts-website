@@ -947,3 +947,36 @@ color: #222;
     cursor: pointer;
   }
 }
+
+@media (max-width: 768px) {
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+  }
+
+  .logo {
+    font-size: 1.4rem; /* ajustá si querés más chico */
+    line-height: 1;
+  }
+
+  .hamburger {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo .accent {
+    font-size: 0.95em;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    line-height: 1;
+    padding: 4px;
+  }
+}
+
