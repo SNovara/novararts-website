@@ -958,7 +958,7 @@ color: #222;
   }
 
   .logo {
-    font-size: 1rem; /* ajustá si querés más chico */
+    font-size: 1.2rem; /* ajustá si querés más chico */
     line-height: 1;
   }
 
@@ -990,7 +990,7 @@ color: #222;
   }
 
   .articulo-fecha {
-    font-size: 0.85rem;
+    font-size: 0.70rem;
     line-height: 1.2;
   }
 }
