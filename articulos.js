@@ -10,7 +10,7 @@ const articulos = [
     thumb: "images/thumbnail-images/Mega-Man-Dual-Override.png",
   },
   {
-    titulo: "Las mejores canciones de videojuegos",
+    titulo: "Grandes canciones de videojuegos",
     descripcion: "Un listado de mis canciones favoritas.",
     fecha: "2025-12-05",
     url: "articles/las-mejores-canciones-de-videojuegos.html",
