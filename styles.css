@@ -660,10 +660,12 @@ color: #222;
 
 .veredicto-final {
   text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
   margin-top: 3rem;
 }
 
-.veredicto-final .puntaje {
+.veredicto-final span {
   color: red;
 }
 
