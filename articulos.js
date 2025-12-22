@@ -4,7 +4,7 @@ const articulos = [
   {
     titulo: "Reseña de Metroid Prime 4: Beyond",
     descripcion: "Una entrega adaptada a tiempos modernos.",
-    fecha: "2025-12-21",
+    fecha: "2025-12-22",
     url: "articles/resena-metroid-prime-beyond.html",
     tag: "Reseña",
     thumb: "images/thumbnail-images/Metroid-Prime-4-Beyond.png",
