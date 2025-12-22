@@ -658,6 +658,15 @@ color: #222;
   color: #444;
 }
 
+.veredicto-final {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.veredicto-final .puntaje {
+  color: red;
+}
+
 /* Imágenes dentro de artículos */
 .articulo-imagen {
   margin: 2rem auto;
