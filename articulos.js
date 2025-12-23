@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: ""La enseñanza de Majora",
+    descripcion: "La lección de vida de un gran videojuego.",
+    fecha: "2025-12-23",
+    url: "articles/la-ensenanza-de-majora.html",
+    tag: "Ensayo",
+    thumb: "images/thumbnail-images/Majoras-Mask-3D-cover.png",
+  },
+  {
     titulo: "Reseña de Metroid Prime 4: Beyond",
     descripcion: "Una entrega adaptada a tiempos modernos.",
     fecha: "2025-12-22",
@@ -47,6 +55,6 @@ const articulos = [
     fecha: "2025-11-20",
     url: "articles/la-crisis-oculta-de-nintendo.html",
     tag: "Análisis",
-    thumb: "images/thumbnail-images/Nintendo-Switch-2.png",
+    thumb: "images/thumbnail-images/Nintendo-Switch-2-logo.png",
   },
 ];
