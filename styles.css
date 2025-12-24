@@ -1011,3 +1011,69 @@ color: #222;
     opacity: 0.75;
   }
 }
+
+/* =========================
+   PROJECTS / PORTFOLIO
+========================= */
+
+.proyectos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+
+.projects-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.project-item {
+  display: block;
+  max-width: 900px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 0 0 3px #ffd400;
+}
+
+/* Hover solo visual */
+.project-item:hover {
+  transform: scale(1.02);
+}
+
+/* Flechas */
+.project-arrow {
+  font-size: 48px;
+  color: #ccc;
+  cursor: default;
+  user-select: none;
+}
+
+.project-arrow.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .project-arrow {
+    display: none;
+  }
+
+  .projects-container {
+    padding: 20px 10px;
+  }
+}
+
