@@ -1065,6 +1065,12 @@ color: #222;
   pointer-events: none;
 }
 
+.project-arrows {
+  display: flex;
+  gap: 40px;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
 
@@ -1075,22 +1081,20 @@ color: #222;
   }
 
   .project-item {
+    order: 1;
     max-width: 85%;
+  }
+
+  .project-arrows {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
   }
 
   .project-arrow {
     font-size: 36px;
     opacity: 0.35;
   }
-
-  .project-arrow.left,
-  .project-arrow.right {
-    order: 2;
-  }
-
-  .project-item {
-    order: 1;
-  }
 }
-
 
