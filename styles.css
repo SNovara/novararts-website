@@ -1065,42 +1065,29 @@ color: #222;
   pointer-events: none;
 }
 
+.project-arrows {
+  display: flex;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
 
   .projects-container {
     flex-direction: column;
+    align-items: center;
     gap: 20px;
-    padding: 20px 10px;
-  }
-
-  .project-item {
-    max-width: 85%;
-  }
-
-  .project-arrow {
-    font-size: 36px;
-    opacity: 0.35;
   }
 
   .project-item {
     order: 1;
+    max-width: 85%;
   }
 
-/* Contenedor virtual para flechas */
-.projects-container {
-  align-items: center;
-}
-
-/* Agrupamos las flechas */
-.project-arrow {
-  display: inline-flex;
-}
-
-.project-arrow.left {
-  margin-right: 40px;
-}
+  .project-arrows {
+    order: 2;
+    display: flex;
+    gap: 40px;
+  }
 
 }
-
 
