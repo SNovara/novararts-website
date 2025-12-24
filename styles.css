@@ -1065,29 +1065,12 @@ color: #222;
   pointer-events: none;
 }
 
-.project-arrows {
-  display: flex;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-
-  .projects-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  .project-arrow {
+    display: none;
   }
-
-  .project-item {
-    order: 1;
-    max-width: 85%;
-  }
-
-  .project-arrows {
-    order: 2;
-    display: flex;
-    gap: 40px;
-  }
-
 }
+
+
 
