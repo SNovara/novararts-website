@@ -1067,12 +1067,30 @@ color: #222;
 
 /* Responsive */
 @media (max-width: 768px) {
-  .project-arrow {
-    display: none;
-  }
 
   .projects-container {
+    flex-direction: column;
+    gap: 20px;
     padding: 20px 10px;
   }
+
+  .project-item {
+    max-width: 85%;
+  }
+
+  .project-arrow {
+    font-size: 36px;
+    opacity: 0.35;
+  }
+
+  .project-arrow.left,
+  .project-arrow.right {
+    order: 2;
+  }
+
+  .project-item {
+    order: 1;
+  }
 }
+
 
