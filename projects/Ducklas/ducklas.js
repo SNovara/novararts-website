@@ -2,7 +2,7 @@
 
 const articulos = [
   {
-    titulo: "Ducklas: el videojuego",
+    titulo: "Back & Forth Again: A Duck's Tale by Ducklas",
     descripcion: "¡Pronto podrás probar la demo aquí!",
     fecha: "2025-12-05",
     url: "ducklas-el-juego.html",
