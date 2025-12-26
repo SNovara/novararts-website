@@ -2,8 +2,8 @@
 
 const articulos = [
   {
-    titulo: "La enseñanza de Majora",
-    descripcion: "La lección de vida de un gran videojuego.",
+    titulo: "La enseñanza de Majora's Mask",
+    descripcion: "Una lección de vida de un gran videojuego.",
     fecha: "2025-12-23",
     url: "articles/la-ensenanza-de-majora.html",
     tag: "Ensayo",
