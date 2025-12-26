@@ -1073,6 +1073,7 @@ color: #222;
   }
 }
 
+/* Notas editoriales */
 .texto-inicio .nota-editorial {
   font-size: 0.70rem;      /* fuerza tamaño menor */
   line-height: 1.4;        /* más compacto */
@@ -1083,13 +1084,15 @@ color: #222;
 
 
 @media (max-width: 660px) {
-  .texto-inicio .nota-editorial {
-    font-size: 0.60rem;
-    line-height: 1.35;
-    margin-top: 40px;
-    margin-bottom: 2px;
+  texto-inicio .nota-editorial {
+    font-size: 0.75rem;
+    padding: 0 12px;
   }
 }
 
-
-
+.articulo-completo .nota-editorial {
+  font-size: 0.90rem;      /* fuerza tamaño menor */
+  line-height: 1.4;        /* más compacto */
+  color: #777;
+  text-align: justify;
+}
