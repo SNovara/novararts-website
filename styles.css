@@ -1086,8 +1086,8 @@ color: #222;
   .texto-inicio .nota-editorial {
     font-size: 0.7rem;
     line-height: 1.35;
-    margin-top: 12px;
-    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-bottom: 2px;
     padding: 0 10px;
   }
 }
