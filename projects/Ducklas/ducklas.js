@@ -6,6 +6,6 @@ const articulos = [
     descripcion: "¡Pronto podrás probar la demo aquí!",
     fecha: "2025-12-05",
     url: "ducklas-el-juego.html",
-    thumb: "/images/Ducklas-Portada.png",
+    thumb: "/images/Ducklas-Alone-Cover.png",
   }
 ];

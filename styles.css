@@ -180,7 +180,7 @@ text-align: justify;
   border-radius: 12px;
   border: 1px solid #ddd;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-margin-top: 25px
+margin-top: 15px
 }
 
 .texto-inicio p {
@@ -298,8 +298,8 @@ margin-top: 25px
 
 .articulo-thumb {
   width: 100%;
-  height: 140px;
-  object-fit: contain;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 12px;
 }
@@ -310,6 +310,7 @@ margin-top: 25px
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 0.7rem;
+  text-align: center; /* 👈 esto */
 }
 
 .articulo-card p {
@@ -1072,5 +1073,20 @@ color: #222;
   }
 }
 
+.texto-inicio .nota-editorial {
+  font-size: 0.70rem;      /* fuerza tamaño menor */
+  line-height: 1.4;        /* más compacto */
+  color: #777;
+  margin: 5px auto -25px auto;
+  text-align: justify;
+}
+
+
+@media (max-width: 660px) {
+  texto-inicio .nota-editorial {
+    font-size: 0.75rem;
+    padding: 0 12px;
+  }
+}
 
 
