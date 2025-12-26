@@ -1084,7 +1084,7 @@ color: #222;
 
 @media (max-width: 660px) {
   .texto-inicio .nota-editorial {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     line-height: 1.35;
     margin-top: 20px;
     margin-bottom: 2px;
