@@ -1086,8 +1086,10 @@ color: #222;
 @media (max-width: 660px) {
   .texto-inicio .nota-editorial {
     font-size: 0.75rem;
+    margin-bottom: 12px; /* ajuste clave */
   }
 }
+
 
 .articulo-completo .nota-editorial {
   font-size: 0.90rem;      /* fuerza tamaño menor */
