@@ -180,7 +180,7 @@ text-align: justify;
   border-radius: 12px;
   border: 1px solid #ddd;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-margin-top: 25px
+margin-top: 15px
 }
 
 .texto-inicio p {
@@ -298,8 +298,8 @@ margin-top: 25px
 
 .articulo-thumb {
   width: 100%;
-  height: 140px;
-  object-fit: contain;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 10px;
   margin-bottom: 12px;
 }
@@ -310,6 +310,7 @@ margin-top: 25px
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 0.7rem;
+  text-align: center; /* 👈 esto */
 }
 
 .articulo-card p {
@@ -1072,5 +1073,139 @@ color: #222;
   }
 }
 
+/* Notas editoriales */
+.texto-inicio .nota-editorial {
+  font-size: 0.70rem;      /* fuerza tamaño menor */
+  line-height: 1.4;        /* más compacto */
+  color: #777;
+  margin: 51px auto -25px auto;
+  text-align: justify;
+}
 
+
+@media (max-width: 660px) {
+  .texto-inicio .nota-editorial {
+    font-size: 0.75rem;
+    margin-bottom: 12px; /* ajuste clave */
+  }
+}
+
+.articulo-completo .nota-editorial {
+  font-size: 0.90rem;      /* fuerza tamaño menor */
+  line-height: 1.4;        /* más compacto */
+  color: #777;
+  text-align: justify;
+}
+
+/* CONTENEDOR GENERAL DEL JUEGO */
+#ducklas-player {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CANVAS DE UNITY */
+#unity-canvas {
+  width: auto !important;
+  height: 100% !important;
+  aspect-ratio: 16 / 10;
+  display: block;
+}
+
+/* COVER INICIAL */
+#ducklas-cover {
+  position: absolute;
+  inset: 0;
+  background: url('ducklas-cover.jpg') center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+/* BOTÓN PLAY */
+#ducklas-cover button {
+  font-size: 1.2rem;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: none;
+  background: #e63946;
+  color: white;
+  cursor: pointer;
+}
+
+/* OVERLAY PARA FORZAR PRIMER CLICK */
+#ducklas-focus {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* OCULTAR CURSOR CUANDO EL JUEGO ESTÁ CORRIENDO */
+#ducklas-player.playing {
+  cursor: none;
+}
+
+
+/* Ducklas Demo en dispositivos móviles */
+.ducklas-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .ducklas-desktop {
+    display: none;
+  }
+
+  .ducklas-mobile {
+    display: block;
+  }
+}
+
+.ducklas-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .ducklas-desktop {
+    display: none;
+  }
+
+@media (max-width: 768px) {
+  .ducklas-mobile {
+    display: block;
+    text-align: justify;
+    padding: 32px 16px;
+    max-width: 520px;
+    margin: 64px auto 0 auto; /* 👈 esto es la clave */
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+  .mobile-warning strong {
+    font-size: 2rem;
+  }
+}
+
+.mobile-warning {
+  text-align: justify;
+}
+
+.mobile-warning strong {
+  display: block;
+  text-align: center;
+}
 

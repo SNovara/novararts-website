@@ -2,8 +2,8 @@
 
 const articulos = [
   {
-    titulo: "La enseñanza de Majora",
-    descripcion: "La lección de vida de un gran videojuego.",
+    titulo: "La enseñanza de Majora's Mask",
+    descripcion: "Una lección de vida de un gran videojuego.",
     fecha: "2025-12-23",
     url: "articles/la-ensenanza-de-majora.html",
     tag: "Ensayo",
@@ -34,8 +34,8 @@ const articulos = [
     thumb: "images/thumbnail-images/Music-Note.png",
   },
   {
-    titulo: "La colección que perdí",
-    descripcion: "Un recuerdo de lo que llegué a tener.",
+    titulo: "La colección que llegué a tener",
+    descripcion: "Un recuerdo de los juegos y consolas que perdí.",
     fecha: "2025-11-26",
     url: "articles/la-coleccion-que-perdi.html",
     tag: "Crónica",
@@ -45,7 +45,7 @@ const articulos = [
     titulo: "10 juegos que faltan en Nintendo Switch",
     descripcion: "Un listado de juegos que quisiera ver en la híbrida.",
     fecha: "2025-11-23",
-    url: "articles/10-juegos-que-faltan-en-switch_v2.html",
+    url: "articles/10-juegos-que-faltan-en-switch.html",
     tag: "Opinión",
     thumb: "images/thumbnail-images/Nintendo-Switch.jpg",
   },
