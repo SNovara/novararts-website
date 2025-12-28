@@ -45,18 +45,112 @@
 
 <main>
 
-<div class="articulo-completo">
+<div class="articulo-completo ducklas-desktop">
 
   <h1>Back & Forth Again: A Duck's Tale by Ducklas</h1>
   <p class="descripcion-corta">
-    ¡Pronto podrás probar el videojuego aquí!
+    ¡Ayuda a Ducklas a salvar a los patos de la extinción!
   </p>
 
 <article>
 
+<br>
+
+<p><strong><em>Ducklas</em></strong> es un pato antropomorfo del planeta <em>Ducktooine</em> que debe salvar a su especie de la guerra contra las máquinas en el futuro.</p>
+
+<p>Usa tus habilidades de teletransportación y rodado para atravesar obstáculos, emplea tu escudo para derrotar enemigos e interactúa con objetos del entorno para avanzar en la aventura.</p>
+
+<p>¡Muchas gracias por probar la demo de <strong>Back & Forth Again: A Duck's Tale by Ducklas</strong>!</p>
+
+<p class="nota-editorial"><strong>Notas importantes</strong>: el botón de <em>Exit</em> del menú no funciona en su versión web. Si necesitas salir del juego, simplemente aprieta <em>Esc</em> en cualquier momento. Luego del primer <em>click</em> solicitado, la demo funcionará exclusivamente con teclado. </p>
+
+<div id="ducklas-player">
+  <div id="ducklas-cover">
+    <button id="play-ducklas">▶ Play Ducklas Demo</button>
+  </div>
+</div>
+
+<script>
+function startDucklas() {
+  const container = document.getElementById("ducklas-player");
+
+  // Paso 1: mostrar overlay SIN Unity
+  container.innerHTML = `
+    <div id="ducklas-focus">
+      Haz click para comenzar
+    </div>
+  `;
+
+  const focusOverlay = document.getElementById("ducklas-focus");
+
+  // Paso 2: recién al click, cargar Unity
+  focusOverlay.addEventListener("click", () => {
+    container.innerHTML = "";
+    container.classList.add("playing");
+
+    const iframe = document.createElement("iframe");
+    iframe.src = "Ducklas-Demo/index.html";
+    iframe.style.width = "100%";
+    iframe.style.height = "100%";
+    iframe.style.border = "none";
+    iframe.allowFullscreen = true;
+
+    container.appendChild(iframe);
+
+    // foco inmediato
+    iframe.onload = () => {
+      iframe.contentWindow.focus();
+    };
+  });
+}
+
+  function ExitToWebsite() {
+    const container = document.getElementById("ducklas-player");
+
+    container.innerHTML = `
+      <div id="ducklas-cover" style="
+        background: url('ducklas-cover.jpg') center / cover no-repeat;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      ">
+        <button style="
+          font-size: 1.2rem;
+          padding: 12px 24px;
+          border-radius: 6px;
+          border: none;
+          background: #e63946;
+          color: white;
+          cursor: pointer;
+        ">
+          ▶ Play Ducklas Demo
+        </button>
+      </div>
+    `;
+
+    document
+      .getElementById("ducklas-cover")
+      .addEventListener("click", startDucklas);
+  }
+
+  document
+    .getElementById("ducklas-cover")
+    .addEventListener("click", startDucklas);
+</script>
+
 
 </article>
 
+</div>
+
+<div class="articulo-completo ducklas-mobile">
+  <p class="mobile-warning">
+    <strong>Oops!</strong><br>
+    Parece que estás intentando jugar desde un dispositivo móvil, pero esta demo fue diseñada exclusivamente para jugarse con teclado. Para vivir la experiencia completa, por favor ingresá desde una computadora.
+  </p>
 </div>
 
 </main>
@@ -66,6 +160,66 @@
     <p>© 2025 <strong>NovarArts</strong> — Creado por Santiago Novara. Haz click <a href="/sobre.html">aquí</a> para saber más sobre mí.</p>
   </div>
 </footer>
+
+<script>
+const playButton = document.getElementById("play-ducklas");
+const container = document.getElementById("ducklas-player");
+
+playButton.addEventListener("click", () => {
+  container.innerHTML = "";
+
+  const iframe = document.createElement("iframe");
+  iframe.src = "Ducklas-Demo/index.html";
+  iframe.style.width = "100vw";
+  iframe.style.height = "100vh";
+  iframe.style.border = "none";
+  iframe.allowFullscreen = true;
+
+  container.appendChild(iframe);
+
+  // Fullscreen inmediato
+  if (container.requestFullscreen) {
+    container.requestFullscreen();
+  } else if (container.webkitRequestFullscreen) {
+    container.webkitRequestFullscreen();
+  }
+
+  // Cuando carga Unity → ocultar footer y forzar canvas full
+  iframe.onload = () => {
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+    const style = iframeDoc.createElement("style");
+    style.innerHTML = `
+      #unity-footer {
+        display: none !important;
+        height: 0 !important;
+      }
+
+      html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+        background: black;
+        width: 100%;
+        height: 100%;
+      }
+
+      canvas {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    `;
+    iframeDoc.head.appendChild(style);
+  };
+
+  // Al salir de fullscreen → reset total
+  document.addEventListener("fullscreenchange", () => {
+    if (!document.fullscreenElement) {
+      location.reload();
+    }
+  });
+});
+</script>
 
 <script src="/scripts.js"></script>
 
