@@ -15,15 +15,82 @@ body { padding: 0; margin: 0 }
 #unity-fullscreen-button { cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center }
 #unity-warning { position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none }
 
-/* Ocultar visualmente el footer de Unity sin romper layout */
-#unity-footer {
-  visibility: hidden;
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  overflow: hidden;
 }
 
-/* Ocultar los elementos gráficos del footer */
-#unity-webgl-logo,
-#unity-fullscreen-button,
+#unity-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+/* Canvas ocupa toda la pantalla */
+#unity-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Footer superpuesto */
+#unity-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  padding left: 12px;
+padding right: 0;
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+/* Logo a la izquierda */
+#unity-webgl-logo {
+  margin-right: 12px;
+}
+
+/* Empuja todo lo que venga después a la derecha */
+#unity-fullscreen-button {
+  margin-left: auto;
+opacity: 1;
+  filter: none;
+}
+
+/* Título discreto o invisible */
+#unity-build-title {
+  margin-left: 12px;
+  opacity: 0.6;
+  font-size: 0.75rem;
+}
+
+#unity-fullscreen-button {
+  position: absolute;
+  right: 6px;
+  bottom: 6px;
+}
+
+
 #unity-build-title {
   display: none;
 }
 
+#unity-webgl-logo {
+  display: none;
+}
+
+#unity-footer {
+  background: transparent;
+}

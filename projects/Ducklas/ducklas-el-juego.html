@@ -161,66 +161,6 @@ function startDucklas() {
   </div>
 </footer>
 
-<script>
-const playButton = document.getElementById("play-ducklas");
-const container = document.getElementById("ducklas-player");
-
-playButton.addEventListener("click", () => {
-  container.innerHTML = "";
-
-  const iframe = document.createElement("iframe");
-  iframe.src = "Ducklas-Demo/index.html";
-  iframe.style.width = "100vw";
-  iframe.style.height = "100vh";
-  iframe.style.border = "none";
-  iframe.allowFullscreen = true;
-
-  container.appendChild(iframe);
-
-  // Fullscreen inmediato
-  if (container.requestFullscreen) {
-    container.requestFullscreen();
-  } else if (container.webkitRequestFullscreen) {
-    container.webkitRequestFullscreen();
-  }
-
-  // Cuando carga Unity → ocultar footer y forzar canvas full
-  iframe.onload = () => {
-    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-    const style = iframeDoc.createElement("style");
-    style.innerHTML = `
-      #unity-footer {
-        display: none !important;
-        height: 0 !important;
-      }
-
-      html, body {
-        margin: 0 !important;
-        padding: 0 !important;
-        overflow: hidden !important;
-        background: black;
-        width: 100%;
-        height: 100%;
-      }
-
-      canvas {
-        width: 100% !important;
-        height: 100% !important;
-      }
-    `;
-    iframeDoc.head.appendChild(style);
-  };
-
-  // Al salir de fullscreen → reset total
-  document.addEventListener("fullscreenchange", () => {
-    if (!document.fullscreenElement) {
-      location.reload();
-    }
-  });
-});
-</script>
-
 <script src="/scripts.js"></script>
 
 </body>
