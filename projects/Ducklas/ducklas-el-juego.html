@@ -64,11 +64,14 @@
 
 <p class="nota-editorial"><strong>Notas importantes</strong>: el botón de <em>Exit</em> del menú no funciona en su versión web. Si necesitas salir del juego, simplemente aprieta <em>Esc</em> en cualquier momento. Luego del primer <em>click</em> solicitado, la demo funcionará exclusivamente con teclado. </p>
 
-<div id="ducklas-player">
-  <div id="ducklas-cover">
-    <button id="play-ducklas">▶ Play Ducklas Demo</button>
+<div class="ducklas-wrapper">
+  <div id="ducklas-player">
+    <div id="ducklas-cover">
+      <button id="play-ducklas">▶ Play Ducklas Demo</button>
+    </div>
   </div>
 </div>
+
 
 <script>
 function startDucklas() {
@@ -92,6 +95,7 @@ function startDucklas() {
     iframe.src = "Ducklas-Demo/index.html";
     iframe.style.width = "100%";
     iframe.style.height = "100%";
+iframe.style.display = "block";
     iframe.style.border = "none";
     iframe.allowFullscreen = true;
 
