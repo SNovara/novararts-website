@@ -1174,9 +1174,9 @@ color: #222;
 @media (max-width: 768px) {
   .ducklas-mobile {
     display: block;
-    width: 95%;
-    max-width: 520px;
-    margin: 64px auto 0 auto;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto 0 auto;
     padding: 0;
   }
 }
