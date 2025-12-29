@@ -1174,12 +1174,10 @@ color: #222;
 @media (max-width: 768px) {
   .ducklas-mobile {
     display: block;
-    text-align: justify;
-    padding: 32px 16px;
+    width: 95%;
     max-width: 520px;
-    margin: 64px auto 0 auto; /* 👈 esto es la clave */
-    font-size: 0.95rem;
-    line-height: 1.6;
+    margin: 64px auto 0 auto;
+    padding: 0;
   }
 }
 
