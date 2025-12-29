@@ -1066,13 +1066,6 @@ color: #222;
   pointer-events: none;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .project-arrow {
-    display: none;
-  }
-}
-
 /* Notas editoriales */
 .texto-inicio .nota-editorial {
   font-size: 0.70rem;      /* fuerza tamaño menor */
