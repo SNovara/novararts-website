@@ -1152,6 +1152,7 @@ color: #222;
   display: none;
 }
 
+/* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
   /* Oculta la imagen desktop */
@@ -1159,7 +1160,7 @@ color: #222;
     display: none;
   }
 
-  /* Muestra y ajusta la imagen mobile */
+  /* Muestra y ajusta la imagen / contenedor mobile */
   .ducklas-mobile {
     display: block;
     width: 100%;
@@ -1168,20 +1169,27 @@ color: #222;
     padding: 0;
   }
 
-}
+  /* Centrado del warning */
+  .articulo-completo.ducklas-mobile {
+    min-height: calc(100vh - 160px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ajustes del texto */
+  .mobile-warning {
+    max-width: 420px;
+    width: 90%;
+    padding: 16px 20px;
+    text-align: justify;
+  }
 
   .mobile-warning strong {
+    display: block;
+    text-align: center;
     font-size: 2rem;
   }
-}
-
-.mobile-warning {
-  text-align: justify;
-}
-
-.mobile-warning strong {
-  display: block;
-  text-align: center;
 }
 
 .projects-hint {
