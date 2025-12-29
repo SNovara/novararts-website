@@ -1153,32 +1153,21 @@ color: #222;
 }
 
 @media (max-width: 768px) {
+
+  /* Oculta la imagen desktop */
   .ducklas-desktop {
     display: none;
   }
 
-  .ducklas-mobile {
-    display: block;
-  }
-}
-
-.ducklas-mobile {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .ducklas-desktop {
-    display: none;
-  }
-
-@media (max-width: 768px) {
+  /* Muestra y ajusta la imagen mobile */
   .ducklas-mobile {
     display: block;
     width: 100%;
-    max-width: 600px;
-    margin: 20px auto 0 auto;
+    max-width: 760px;
+    margin: 6px auto 0 auto;
     padding: 0;
   }
+
 }
 
   .mobile-warning strong {
@@ -1195,3 +1184,26 @@ color: #222;
   text-align: center;
 }
 
+.projects-hint {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .projects-hint {
+    display: block;
+    text-align: center;
+    margin: 0 0 28px 0;
+  }
+
+  .ducklas-hint {
+    font-size: 1.25rem;
+    color: #666;
+    letter-spacing: 0.4px;
+  }
+}
+
+@media (max-width: 768px) {
+  main.proyectos {
+    flex-direction: column;
+  }
+}
