@@ -34,7 +34,7 @@ const articulos = [
     thumb: "images/thumbnail-images/Music-Note.png",
   },
   {
-    titulo: "La colección que llegué a tener",
+    titulo: "La colección que llegué a poseer",
     descripcion: "Un recuerdo de los juegos y consolas que perdí.",
     fecha: "2025-11-26",
     url: "articles/la-coleccion-que-perdi.html",
