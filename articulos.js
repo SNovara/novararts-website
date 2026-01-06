@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "El encanto del mundo analógico",
+    descripcion: "Análisis y recuerdos de una época pasada.",
+    fecha: "2026-01-06",
+    url: "articles/el-encanto-del-mundo-analógico.html",
+    tag: "Ensayo",
+    thumb: "images/thumbnail-images/Video-Game-Controller.png",
+  },
+  {
     titulo: "La enseñanza de Majora's Mask",
     descripcion: "Una lección de vida de un gran videojuego.",
     fecha: "2025-12-23",
@@ -34,7 +42,7 @@ const articulos = [
     thumb: "images/thumbnail-images/Music-Note.png",
   },
   {
-    titulo: "La colección que llegué a poseer",
+    titulo: "La colección que tuve en mi poder",
     descripcion: "Un recuerdo de los juegos y consolas que perdí.",
     fecha: "2025-11-26",
     url: "articles/la-coleccion-que-perdi.html",
