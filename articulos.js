@@ -6,7 +6,7 @@ const articulos = [
     descripcion: "Análisis y recuerdos de una época pasada.",
     fecha: "2026-01-06",
     url: "articles/el-encanto-del-mundo-analogico.html",
-    tag: "Ensayo",
+    tag: "Reflexión",
     thumb: "images/thumbnail-images/Video-Game-Controller.png",
   },
   {
