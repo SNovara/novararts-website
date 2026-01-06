@@ -5,7 +5,7 @@ const articulos = [
     titulo: "El encanto del mundo analógico",
     descripcion: "Análisis y recuerdos de una época pasada.",
     fecha: "2026-01-06",
-    url: "articles/el-encanto-del-mundo-analógico.html",
+    url: "articles/el-encanto-del-mundo-analogico.html",
     tag: "Ensayo",
     thumb: "images/thumbnail-images/Video-Game-Controller.png",
   },
