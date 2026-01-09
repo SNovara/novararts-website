@@ -10,9 +10,15 @@ const articulos = [
   },
   {
     titulo: "DUCKLAS: el GDD",
-    descripcion: "El Game Design Document original",
+    descripcion: "El Game Design Document original.",
     // fecha: "2025-12-30",
     url: "ducklas-gdd.html",
     thumb: "/images/Ducklas-GDD.png",
+  },
+    titulo: "DUCKLAS: el guion",
+    descripcion: "La prueba piloto para TV.",
+    // fecha: "2025-12-30",
+    url: "ducklas-el-guion.html",
+    thumb: "/images/Ducklas-Script.png",
   },
 ];
