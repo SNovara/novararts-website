@@ -6,7 +6,7 @@ const articulos = [
     descripcion: "Los problemas y virtudes de un principio esencial.",
     fecha: "2026-01-12",
     url: "articles/el-dilema-de-la-diferenciacion.html",
-    tag: "Reflexión",
+    tag: "Ensayo",
     thumb: "images/thumbnail-images/Not-Equal-To.png",
   },
   {
