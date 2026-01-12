@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "El dilema de la diferenciación",
+    descripcion: "Los problemas y virtudes de un principio esencial.",
+    fecha: "2026-01-12",
+    url: "articles/el-dilema-de-la-diferenciacion.html",
+    tag: "Reflexión",
+    thumb: "images/thumbnail-images/Not-Equal-To.png",
+  },
+  {
     titulo: "El encanto del mundo analógico",
     descripcion: "Análisis y recuerdos de una época pasada.",
     fecha: "2026-01-06",
