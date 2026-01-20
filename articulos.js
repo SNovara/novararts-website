@@ -4,7 +4,7 @@ const articulos = [
   {
     titulo: "El desarrollo de mi primer juego",
     descripcion: "La historia de cómo Ducklas llegó a ser.",
-    fecha: "2026-01-12",
+    fecha: "2026-01-20",
     url: "articles/el-desarrollo-de-ducklas.html",
     tag: "Crónica",
     thumb: "images/thumbnail-images/Ducklas.png",
