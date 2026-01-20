@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "El desarrollo de mi primer juego",
+    descripcion: "La historia de cómo Ducklas llegó a ser.",
+    fecha: "2026-01-12",
+    url: "articles/el-desarrollo-de-ducklas.html",
+    tag: "Crónica",
+    thumb: "images/thumbnail-images/Ducklas.png",
+  },
+  {
     titulo: "El dilema de la diferenciación",
     descripcion: "Los problemas y virtudes de un principio esencial.",
     fecha: "2026-01-12",
