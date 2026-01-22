@@ -2,7 +2,7 @@
 
 const articulos = [
   {
-    titulo: "El desarrollo de mi primer juego",
+    titulo: "El desarrollo de mi primer videojuego",
     descripcion: "La historia de cómo Ducklas llegó a ser.",
     fecha: "2026-01-20",
     url: "articles/el-desarrollo-de-ducklas.html",
