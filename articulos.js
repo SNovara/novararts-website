@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "Rescatando recuerdos: Creative Writer",
+    descripcion: "Rememoración de un software perdido.",
+    fecha: "2026-02-08",
+    url: "articles/rescatando-recuerdos-creative-writer.html",
+    tag: "Nostalgia",
+    thumb: "images/thumbnail-images/Creative-Writer.png",
+  },
+  {
     titulo: "El desarrollo de mi primer videojuego",
     descripcion: "La historia de cómo Ducklas llegó a ser.",
     fecha: "2026-01-20",
