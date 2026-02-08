@@ -2,7 +2,7 @@
 
 const articulos = [
   {
-    titulo: "Rescatando recuerdos: Creative Writer",
+    titulo: "Recuerdos perdidos: Creative Writer",
     descripcion: "Rememoración de un software perdido.",
     fecha: "2026-02-08",
     url: "articles/rescatando-recuerdos-creative-writer.html",
