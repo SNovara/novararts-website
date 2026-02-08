@@ -3,7 +3,7 @@
 const articulos = [
   {
     titulo: "Recuerdos perdidos: Creative Writer",
-    descripcion: "Rememoración de un software perdido.",
+    descripcion: "La rememoración de un software olvidado.",
     fecha: "2026-02-08",
     url: "articles/rescatando-recuerdos-creative-writer.html",
     tag: "Nostalgia",
