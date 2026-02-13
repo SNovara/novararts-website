@@ -7,7 +7,7 @@ const articulos = [
     fecha: "2026-02-13",
     url: "articles/rayman-anniversary-edition.html",
     tag: "Noticia",
-    thumb: "images/thumbnail-images/Rayman-30th-Anniversary-Edition.jpeg",
+    thumb: "images/thumbnail-images/Rayman-30th-Anniversary-Edition.jpg",
   },
   {
     titulo: "Recuerdos perdidos: Creative Writer",
