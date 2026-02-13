@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "¡Rayman regresa por la puerta grande!",
+    descripcion: "Se celebra su aniversario número 30.",
+    fecha: "2026-02-13",
+    url: "articles/rayman-anniversary-edition.html",
+    tag: "Noticia",
+    thumb: "images/thumbnail-images/Rayman-30th-Anniversary-Edition.jpeg",
+  },
+  {
     titulo: "Recuerdos perdidos: Creative Writer",
     descripcion: "La rememoración de un software olvidado.",
     fecha: "2026-02-08",
