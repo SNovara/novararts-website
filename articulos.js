@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "El curioso caso de Captain Toad",
+    descripcion: "Algo peculiar se dio en Treasure Tracker.",
+    fecha: "2026-03-04",
+    url: "articles/el-curioso-caso-de-captain-toad.html",
+    tag: "Curiosidad",
+    thumb: "images/thumbnail-images/Captain-Toad-Treasure-Tracker-Cover.png",
+  },
+  {
     titulo: "¡Rayman regresa por la puerta grande!",
     descripcion: "Se celebra su aniversario número 30.",
     fecha: "2026-02-13",
