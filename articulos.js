@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "Recordando a la mítica LucasArts",
+    descripcion: "Mi pequeño homenaje a una compañía legendaria.",
+    fecha: "2026-03-22",
+    url: "articles/recordando-a-lucasarts.html",
+    tag: "Homenaje",
+    thumb: "images/thumbnail-images/LucasArts-Logo.jpg",
+  },
+  {
     titulo: "El curioso caso de Captain Toad",
     descripcion: "Algo peculiar se dio en Treasure Tracker.",
     fecha: "2026-03-04",
