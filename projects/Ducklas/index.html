@@ -4,36 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="canonical" href="https://novararts.com.ar/projects/Ducklas/">
+  <link rel="canonical" href="https://novararts.com.ar/projects/Ducklas/">
 
   <!-- FAVICON -->
   <link rel="icon" href="/favicon.ico" sizes="any">
 
-<!-- Open Graph -->
-  <meta name="description" content="Noticias, reseñas y ensayos sobre videojuegos.">
-<meta property="og:title" content="NovarArts">
-<meta property="og:description" content="Artículos">
-<meta property="og:image" content="https://novararts.com.ar/images/Logo.png">
-<meta property="og:url" content="https://novararts.com.ar/projects/Ducklas/index.html">
-<meta property="og:type" content="web">
+  <!-- Open Graph -->
+  <meta name="description" content="Proyecto Ducklas de NovarArts.">
+  <meta property="og:title" content="Ducklas | NovarArts">
+  <meta property="og:description" content="Ducklas — el proyecto">
+  <meta property="og:image" content="https://novararts.com.ar/images/Logo.png">
+  <meta property="og:url" content="https://novararts.com.ar/projects/Ducklas/">
+  <meta property="og:type" content="website">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NovarArts">
-<meta name="twitter:description" content="Artículos">
-<meta name="twitter:image" content="https://novararts.com.ar/images/Logo.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ducklas | NovarArts">
+  <meta name="twitter:description" content="Ducklas — el proyecto">
+  <meta name="twitter:image" content="https://novararts.com.ar/images/Logo.png">
 
-  <title>NovarArts</title>
+  <title>Ducklas | NovarArts</title>
   <link rel="stylesheet" href="/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-    <!-- Header -->
+<!-- Header -->
 <header>
-  <a href="/index.html" class="logo">Novar<span class="accent">Arts</span></a>
+  <a href="/index.html" class="logo"><span class="logo-full">Novar<span class="accent">Arts</span></span><span class="logo-short">N<span class="accent">A</span></span></a>
 
-  <nav>
+  <nav class="nav">
     <ul>
       <li><a href="/index.html">Inicio</a></li>
       <li><a href="/articulos.html">Artículos</a></li>
@@ -41,43 +41,24 @@
       <li><a href="/contacto.html">Contacto</a></li>
     </ul>
   </nav>
+
+  <button class="hamburger" aria-label="Menu">☰</button>
 </header>
 
-    <main class="articulos-container">
-        <div id="articulos-list" class="articulos-grid"></div>
-    </main>
+<main class="articulos-container centrado">
+  <h1 class="proyecto-titulo">Back &amp; Forth Again: A Duck's Tale <span class="by">by</span> <span class="nombre">Ducklas</span></h1>
+  <div id="articulos-list" class="articulos-grid"></div>
+</main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-about">
-      <p>© 2025 <strong>NovarArts</strong> — Creado por Santiago Novara. Haz click <a href="/sobre.html">aquí</a> para saber más sobre mí.</p>
-    </div>
-  </footer>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Archivo actual sin ruta ni parámetros
-    let currentPage = window.location.pathname.split("/").pop().split("?")[0];
-
-    // Caso especial: si abre como carpeta -> es index.html
-    if (currentPage === "" || !currentPage.includes(".")) {
-      currentPage = "index.html";
-    }
-
-    document.querySelectorAll("nav ul li a").forEach(link => {
-      // También obtenemos SOLO el archivo del href
-      let linkPage = link.getAttribute("href").split("/").pop();
-
-      if (linkPage === currentPage) {
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
+<!-- Footer -->
+<footer>
+  <div class="footer-about">
+    <p>© 2025 <strong>NovarArts</strong> — Creado por Santiago Novara. Haz click <a href="/sobre.html">aquí</a> para saber más sobre mí.</p>
+  </div>
+</footer>
 
 <script src="ducklas.js"></script>
 <script src="/scripts.js"></script>
 
 </body>
 </html>
-

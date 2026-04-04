@@ -4,26 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="canonical" href="https://novararts.com.ar/">
+  <link rel="canonical" href="https://novararts.com.ar/">
 
   <!-- FAVICON -->
   <link rel="icon" href="/favicon.ico" sizes="any">
 
-<!-- Open Graph -->
+  <!-- Open Graph -->
   <meta name="description" content="Noticias, reseñas y ensayos sobre videojuegos.">
-<meta property="og:title" content="NovarArts">
-<meta property="og:description" content="Noticias, reseñas y ensayos sobre videojuegos.">
-<meta property="og:image" content="https://novararts.com.ar/images/Logo.png">
-<meta property="og:url" content="https://novararts.com.ar/index.html">
-<meta property="og:type" content="web">
+  <meta property="og:title" content="NovarArts">
+  <meta property="og:description" content="Noticias, reseñas y ensayos sobre videojuegos.">
+  <meta property="og:image" content="https://novararts.com.ar/images/Logo.png">
+  <meta property="og:url" content="https://novararts.com.ar/">
+  <meta property="og:type" content="website">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NovarArts">
-<meta name="twitter:description" content="Noticias, reseñas y ensayos sobre videojuegos.">
-<meta name="twitter:image" content="https://novararts.com.ar/images/Logo.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NovarArts">
+  <meta name="twitter:description" content="Noticias, reseñas y ensayos sobre videojuegos.">
+  <meta name="twitter:image" content="https://novararts.com.ar/images/Logo.png">
 
-  <title>NovarArts</title>
+  <title>NovarArts — Blog de videojuegos</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -32,7 +32,7 @@
 <body>
 
 <header>
-  <a href="index.html" class="logo">Novar<span class="accent">Arts</span></a>
+  <a href="/index.html" class="logo"><span class="logo-full">Novar<span class="accent">Arts</span></span><span class="logo-short">N<span class="accent">A</span></span></a>
 
   <nav class="nav">
     <ul>
@@ -43,40 +43,31 @@
     </ul>
   </nav>
 
-  <button class="hamburger" aria-label="Menu">
-    ☰
-  </button>
-
+  <button class="hamburger" aria-label="Menu">☰</button>
 </header>
 
-<!-- TODO LO DEL MEDIO AHORA ESTÁ DENTRO DE MAIN -->
 <main>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1 class="titulo-bienvenida">
-      Bienvenidos a <span class="titulo-novar">Novar</span><span class="titulo-arts">Arts</span>
-    </h1>
+  <!-- Columnas: texto + últimas entradas -->
+  <div class="inicio-columnas">
+    <div class="texto-inicio">
+      <p>¡Bienvenidos a <strong>NovarArts</strong>!</p>
+      <p>En la sección de <a href="articulos.html">artículos</a>, podrán encontrar notas de opinión, análisis, reseñas, ensayos y anécdotas relacionadas con el mundo de los videojuegos.</p>
+      <p>Por otro lado, esta página sirve también como <a href="proyectos.html"><em>portfolio</em></a>, en el que se subirán avances de proyectos personales para quien esté interesado.</p>
+      <p>¡Gracias por visitar mi blog! =)</p>
+      <p class="nota-editorial">
+        Este sitio utiliza tanto material original como imágenes pertenecientes a terceros,
+        empleadas con fines editoriales y de análisis crítico.
+        NovarArts no reclama derechos sobre obras ajenas.
+      </p>
+    </div>
 
-<div class="texto-inicio">
-
-<p>¡Bienvenidos a mi blog!</p>
-
-<p>En la sección de <a href="articulos.html">artículos</a>, podrán encontrar notas de opinión, análisis, reseñas, ensayos y anécdotas relacionadas con el mundo de los videojuegos.</p> 
-
-<p>Por otro lado, esta página sirve también como <a href="proyectos.html"><em>portfolio</em></a>, en el que se subirán avances de proyectos personales para quien esté interesado.</p>
-
-<p>¡Gracias por visitar <strong>NovarArts</strong>! =)</p>
-
-  <p class="nota-editorial">
-    Este sitio utiliza tanto material original como imágenes pertenecientes a terceros,
-    empleadas con fines editoriales y de análisis crítico.
-    NovarArts no reclama derechos sobre obras ajenas.
-  </p>
-
-</div>
-
-  </section>
+    <section class="inicio-ultimos">
+      <h2>Últimas entradas</h2>
+      <div class="inicio-recientes" id="inicio-recientes"></div>
+      <a href="articulos.html" class="inicio-ver-todos">Ver todos los artículos →</a>
+    </section>
+  </div>
 
 </main>
 
@@ -88,17 +79,42 @@
   </div>
 </footer>
 
+<script src="/articulos.js"></script>
 <script src="/scripts.js"></script>
 
 <script>
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('nav');
+  // Mostrar los 4 artículos más recientes en la página de inicio
+  document.addEventListener("DOMContentLoaded", () => {
+    const contenedor = document.getElementById("inicio-recientes");
+    if (!contenedor || typeof articulos === "undefined") return;
 
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
+    const recientes = [...articulos]
+      .sort((a, b) => new Date(b.fecha) - new Date(a.fecha))
+      .slice(0, 4);
+
+    const meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
+
+    recientes.forEach(a => {
+      const [y, m, d] = a.fecha.split("-").map(Number);
+      const fechaLegible = `${d} de ${meses[m - 1]} de ${y}`;
+
+      const item = document.createElement("a");
+      item.href = a.url;
+      item.className = "inicio-reciente-item";
+      item.innerHTML = `
+        ${a.thumb ? `<img class="inicio-reciente-thumb" src="${a.thumb}" alt="${a.titulo}">` : ""}
+        <div class="inicio-reciente-info">
+          <span class="inicio-reciente-titulo">${a.titulo}</span>
+          <span class="inicio-reciente-meta">
+            ${a.tag ? `<span class="inicio-reciente-etiqueta">${a.tag}</span>` : ""}
+            ${fechaLegible}
+          </span>
+        </div>
+      `;
+      contenedor.appendChild(item);
+    });
   });
 </script>
 
 </body>
 </html>
-

@@ -4,39 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="canonical" href="https://novararts.com.ar/articulos.html">
+  <link rel="canonical" href="https://novararts.com.ar/articulos.html">
 
   <!-- FAVICON -->
   <link rel="icon" href="/favicon.ico" sizes="any">
 
-<!-- Open Graph -->
+  <!-- Open Graph -->
   <meta name="description" content="Noticias, reseñas y ensayos sobre videojuegos.">
-<meta property="og:title" content="NovarArts">
-<meta property="og:description" content="Artículos">
-<meta property="og:image" content="https://novararts.com.ar/images/Logo.png">
-<meta property="og:url" content="https://novararts.com.ar/articulos.html">
-<meta property="og:type" content="web">
+  <meta property="og:title" content="Artículos | NovarArts">
+  <meta property="og:description" content="Artículos">
+  <meta property="og:image" content="https://novararts.com.ar/images/Logo.png">
+  <meta property="og:url" content="https://novararts.com.ar/articulos.html">
+  <meta property="og:type" content="website">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NovarArts">
-<meta name="twitter:description" content="Artículos">
-<meta name="twitter:image" content="https://novararts.com.ar/images/Logo.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Artículos | NovarArts">
+  <meta name="twitter:description" content="Artículos">
+  <meta name="twitter:image" content="https://novararts.com.ar/images/Logo.png">
 
-  <title>NovarArts</title>
+  <title>Artículos | NovarArts</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
-    <!-- Header -->
 <header>
-  <a href="index.html" class="logo">Novar<span class="accent">Arts</span></a>
+  <a href="/index.html" class="logo"><span class="logo-full">Novar<span class="accent">Arts</span></span><span class="logo-short">N<span class="accent">A</span></span></a>
 
-<form class="search-bar" action="articulos.html" method="GET">
-  <input type="text" name="q" placeholder="Buscar artículos...">
-  <button type="submit">🔍</button>
-</form>
+  <form class="search-bar" action="articulos.html" method="GET">
+    <input type="text" name="q" placeholder="Buscar artículos...">
+    <button type="submit">🔍</button>
+  </form>
 
   <nav class="nav">
     <ul>
@@ -47,62 +46,28 @@
     </ul>
   </nav>
 
-  <button class="hamburger" aria-label="Menu">
-    ☰
-  </button>
-
+  <button class="hamburger" aria-label="Menu">☰</button>
 </header>
 
-    <main class="articulos-container">
-        <div id="articulos-list" class="articulos-grid"></div>
+<main class="articulos-container">
+  <div id="articulos-list" class="articulos-grid"></div>
 
-        <div class="pagination">
-            <button id="prev-block" class="pagination-btn" disabled>« Anterior</button>
-            <div id="pagination-numbers" class="pagination-numbers"></div>
-            <button id="next-block" class="pagination-btn">Siguiente »</button>
-        </div>
-    </main>
+  <div class="pagination">
+    <button id="prev-block" class="pagination-btn" disabled>« Anterior</button>
+    <div id="pagination-numbers" class="pagination-numbers"></div>
+    <button id="next-block" class="pagination-btn">Siguiente »</button>
+  </div>
+</main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-about">
-      <p>© 2025 <strong>NovarArts</strong> — Creado por Santiago Novara. Haz click <a href="sobre.html">aquí</a> para saber sobre mí.</p>
-    </div>
-  </footer>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Archivo actual sin ruta ni parámetros
-    let currentPage = window.location.pathname.split("/").pop().split("?")[0];
-
-    // Caso especial: si abre como carpeta -> es index.html
-    if (currentPage === "" || !currentPage.includes(".")) {
-      currentPage = "index.html";
-    }
-
-    document.querySelectorAll("nav ul li a").forEach(link => {
-      // También obtenemos SOLO el archivo del href
-      let linkPage = link.getAttribute("href").split("/").pop();
-
-      if (linkPage === currentPage) {
-        link.classList.add("active");
-      }
-    });
-  });
-</script>
+<!-- Footer -->
+<footer>
+  <div class="footer-about">
+    <p>© 2025 <strong>NovarArts</strong> — Creado por Santiago Novara. Haz click <a href="sobre.html">aquí</a> para saber sobre mí.</p>
+  </div>
+</footer>
 
 <script src="/articulos.js"></script>
 <script src="/scripts.js"></script>
 
-<script>
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('nav');
-
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-</script>
-
 </body>
 </html>
-

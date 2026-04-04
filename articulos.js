@@ -8,9 +8,10 @@ const articulos = [
     url: "articles/recordando-a-lucasarts.html",
     tag: "Homenaje",
     thumb: "images/thumbnail-images/LucasArts-Logo.jpg",
+    thumbBg: "#000",
   },
   {
-    titulo: "El curioso caso de Captain Toad",
+    titulo: "Algo único pasó con Captain Toad: Treasure Tracker",
     descripcion: "Algo peculiar se dio en Treasure Tracker.",
     fecha: "2026-03-04",
     url: "articles/el-curioso-caso-de-captain-toad.html",
@@ -18,7 +19,7 @@ const articulos = [
     thumb: "images/thumbnail-images/Captain-Toad-Treasure-Tracker-Cover.png",
   },
   {
-    titulo: "¡Rayman regresa por la puerta grande!",
+    titulo: "¡Regresa el primer juego de Rayman por sus 30 años!",
     descripcion: "Se celebra su aniversario número 30.",
     fecha: "2026-02-13",
     url: "articles/rayman-anniversary-edition.html",
@@ -26,7 +27,7 @@ const articulos = [
     thumb: "images/thumbnail-images/Rayman-30th-Anniversary-Edition.jpg",
   },
   {
-    titulo: "Recuerdos perdidos: Creative Writer",
+    titulo: "Rescatando recuerdos N° 1: Creative Writer",
     descripcion: "La rememoración de un software olvidado.",
     fecha: "2026-02-08",
     url: "articles/rescatando-recuerdos-creative-writer.html",
@@ -34,12 +35,13 @@ const articulos = [
     thumb: "images/thumbnail-images/Creative-Writer.png",
   },
   {
-    titulo: "El desarrollo de mi primer videojuego",
-    descripcion: "La historia de cómo Ducklas llegó a ser.",
+    titulo: "La historia completa de la creación de Ducklas",
+    descripcion: "Cómo Ducklas llegó a ser.",
     fecha: "2026-01-20",
     url: "articles/el-desarrollo-de-ducklas.html",
     tag: "Crónica",
     thumb: "images/thumbnail-images/Ducklas.png",
+    thumbBg: "#000",
   },
   {
     titulo: "El dilema de la diferenciación",
@@ -58,7 +60,7 @@ const articulos = [
     thumb: "images/thumbnail-images/Video-Game-Controller.png",
   },
   {
-    titulo: "La enseñanza de Majora's Mask",
+    titulo: "La enseñanza de Majora",
     descripcion: "Una lección de vida de un gran videojuego.",
     fecha: "2025-12-23",
     url: "articles/la-ensenanza-de-majora.html",
@@ -74,7 +76,7 @@ const articulos = [
     thumb: "images/thumbnail-images/Metroid-Prime-4-Beyond.png",
   },
   {
-    titulo: "¡Nuevo Mega Man recién anunciado!",
+    titulo: "¡Mega Man: Dual Override recién anunciado!",
     descripcion: "Gran noticia para los fans de la saga.",
     fecha: "2025-12-12",
     url: "articles/nuevo-mega-man-anunciado.html",
@@ -90,7 +92,7 @@ const articulos = [
     thumb: "images/thumbnail-images/Music-Note.png",
   },
   {
-    titulo: "La colección que tuve en mi poder",
+    titulo: "La colección que llegué a tener en mi poder",
     descripcion: "Un recuerdo de los juegos y consolas que perdí.",
     fecha: "2025-11-26",
     url: "articles/la-coleccion-que-perdi.html",

@@ -32,7 +32,7 @@
 <body>
 
 <header>
-  <a href="/index.html" class="logo">Novar<span class="accent">Arts</span></a>
+  <a href="/index.html" class="logo"><span class="logo-full">Novar<span class="accent">Arts</span></span><span class="logo-short">N<span class="accent">A</span></span></a>
 
   <nav class="nav">
     <ul>
@@ -213,6 +213,10 @@
 
  </article>
 
+<div class="articulo-footer">
+  <a href="/articulos.html" class="volver-articulos">Volver a artículos</a>
+</div>
+
 </div>
 
 <footer>
@@ -222,15 +226,6 @@
 </footer>
 
 <script src="/scripts.js"></script>
-
-<script>
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('nav');
-
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-</script>
 
 </body>
 </html>

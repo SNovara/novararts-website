@@ -4,26 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="canonical" href="https://novararts.com.ar/proyectos.html">
+  <link rel="canonical" href="https://novararts.com.ar/proyectos.html">
 
   <!-- FAVICON -->
   <link rel="icon" href="/favicon.ico" sizes="any">
 
-<!-- Open Graph -->
-  <meta name="description" content="Noticias, reseñas y ensayos sobre videojuegos.">
-<meta property="og:title" content="NovarArts">
-<meta property="og:description" content="Proyectos">
-<meta property="og:image" content="https://novararts.com.ar/images/Logo.png">
-<meta property="og:url" content="https://novararts.com.ar/proyectos.html">
-<meta property="og:type" content="web">
+  <!-- Open Graph -->
+  <meta name="description" content="Portfolio de proyectos de NovarArts.">
+  <meta property="og:title" content="Proyectos | NovarArts">
+  <meta property="og:description" content="Proyectos">
+  <meta property="og:image" content="https://novararts.com.ar/images/Logo.png">
+  <meta property="og:url" content="https://novararts.com.ar/proyectos.html">
+  <meta property="og:type" content="website">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NovarArts">
-<meta name="twitter:description" content="Portfolio">
-<meta name="twitter:image" content="https://novararts.com.ar/images/Logo.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Proyectos | NovarArts">
+  <meta name="twitter:description" content="Portfolio">
+  <meta name="twitter:image" content="https://novararts.com.ar/images/Logo.png">
 
-  <title>NovarArts</title>
+  <title>Proyectos | NovarArts</title>
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -32,7 +32,7 @@
 <body>
 
 <header>
-  <a href="index.html" class="logo">Novar<span class="accent">Arts</span></a>
+  <a href="/index.html" class="logo"><span class="logo-full">Novar<span class="accent">Arts</span></span><span class="logo-short">N<span class="accent">A</span></span></a>
 
   <nav class="nav">
     <ul>
@@ -43,34 +43,31 @@
     </ul>
   </nav>
 
-  <button class="hamburger" aria-label="Menu">
-    ☰
-  </button>
-
+  <button class="hamburger" aria-label="Menu">☰</button>
 </header>
 
 <main class="proyectos">
 
-<section class="projects-hint">
-  <p class="ducklas-hint">¡Toca la imagen para ver el proyecto!</p>
-</section>
+  <section class="projects-hint">
+    <p class="ducklas-hint">¡Toca la imagen para ver el proyecto!</p>
+  </section>
 
-<section class="projects-container">
+  <section class="projects-container">
 
-  <div class="project-arrow disabled left">
-    <i class="fas fa-chevron-left"></i>
-  </div>
+    <div class="project-arrow left">
+      <i class="fas fa-chevron-left"></i>
+    </div>
 
-  <a class="project-item" href="projects/Ducklas/index.html">
-    <img src="/images/Ducklas-Portada.png" class="ducklas-desktop" alt="Ducklas Cover">
-    <img src="/images/Ducklas-Portada-Mobile.png" class="ducklas-mobile" alt="Ducklas Mobile Cover">
-  </a>
+    <a class="project-item" href="projects/Ducklas/index.html">
+      <img src="/images/Ducklas-Portada.png" class="ducklas-desktop" alt="Ducklas Cover">
+      <img src="/images/Ducklas-Portada-Mobile.png" class="ducklas-mobile" alt="Ducklas Mobile Cover">
+    </a>
 
-  <div class="project-arrow disabled right">
-    <i class="fas fa-chevron-right"></i>
-  </div>
+    <div class="project-arrow right">
+      <i class="fas fa-chevron-right"></i>
+    </div>
 
-</section>
+  </section>
 
 </main>
 
@@ -83,15 +80,6 @@
 </footer>
 
 <script src="/scripts.js"></script>
-
-<script>
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('nav');
-
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-</script>
 
 </body>
 </html>

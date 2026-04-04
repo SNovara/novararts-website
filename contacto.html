@@ -4,24 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="canonical" href="https://novararts.com.ar/contacto.html">
+  <link rel="canonical" href="https://novararts.com.ar/contacto.html">
 
   <!-- FAVICON -->
   <link rel="icon" href="/favicon.ico" sizes="any">
 
-<!-- Open Graph -->
-  <meta name="description" content="Noticias, reseñas y ensayos sobre videojuegos.">
-<meta property="og:title" content="NovarArts">
-<meta property="og:description" content="Contacto">
-<meta property="og:image" content="https://novararts.com.ar/images/Logo.png">
-<meta property="og:url" content="https://novararts.com.ar/contacto.html">
-<meta property="og:type" content="web">
+  <!-- Open Graph -->
+  <meta name="description" content="Contacto con el creador de NovarArts.">
+  <meta property="og:title" content="Contacto | NovarArts">
+  <meta property="og:description" content="Contacto">
+  <meta property="og:image" content="https://novararts.com.ar/images/Logo.png">
+  <meta property="og:url" content="https://novararts.com.ar/contacto.html">
+  <meta property="og:type" content="website">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NovarArts">
-<meta name="twitter:description" content="Contacto">
-<meta name="twitter:image" content="https://novararts.com.ar/images/Logo.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contacto | NovarArts">
+  <meta name="twitter:description" content="Contacto">
+  <meta name="twitter:image" content="https://novararts.com.ar/images/Logo.png">
 
   <title>Contacto | NovarArts</title>
   <link rel="stylesheet" href="styles.css">
@@ -31,23 +31,20 @@
 <body>
 
   <!-- Header -->
-<header>
-  <a href="index.html" class="logo">Novar<span class="accent">Arts</span></a>
+  <header>
+    <a href="/index.html" class="logo"><span class="logo-full">Novar<span class="accent">Arts</span></span><span class="logo-short">N<span class="accent">A</span></span></a>
 
-  <nav class="nav">
-    <ul>
-      <li><a href="/index.html">Inicio</a></li>
-      <li><a href="/articulos.html">Artículos</a></li>
-      <li><a href="/proyectos.html">Proyectos</a></li>
-      <li><a href="/contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
+    <nav class="nav">
+      <ul>
+        <li><a href="/index.html">Inicio</a></li>
+        <li><a href="/articulos.html">Artículos</a></li>
+        <li><a href="/proyectos.html">Proyectos</a></li>
+        <li><a href="/contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
 
-  <button class="hamburger" aria-label="Menu">
-    ☰
-  </button>
-
-</header>
+    <button class="hamburger" aria-label="Menu">☰</button>
+  </header>
 
   <!-- Contacto -->
   <main class="contacto">
@@ -56,7 +53,6 @@
       <p>¿Querés ponerte en contacto conmigo? Escribime y te responderé a la brevedad.</p>
 
       <form id="contact-form" action="https://formspree.io/f/xrbonrak" method="POST" class="form-contacto">
-
         <label for="nombre">Nombre</label>
         <input type="text" id="nombre" name="name" required>
 
@@ -67,9 +63,8 @@
         <textarea id="mensaje" name="message" rows="5" required></textarea>
 
         <button class="boton-contacto" type="submit">Enviar mensaje</button>
-
       </form>
-	<p id="form-status" class="form-status"></p>
+      <p id="form-status" class="form-status"></p>
     </section>
   </main>
 
@@ -80,97 +75,68 @@
     </div>
   </footer>
 
-<script>
-  (function() {
-    const form = document.getElementById('contact-form');
-    const status = document.getElementById('form-status');
+  <script>
+    (function() {
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
 
-    if (!form) {
-      console.error("No se encontró el formulario #contact-form");
-      return;
-    }
+      if (!form) return;
 
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
 
-      // Mostrar estado de envío
-      status.style.display = "block";
-      status.classList.remove('success', 'error');
-      status.textContent = "⏳ Enviando...";
+        status.style.display = "block";
+        status.classList.remove('success', 'error');
+        status.textContent = "⏳ Enviando...";
 
-      const data = new FormData(form);
+        const data = new FormData(form);
 
-      try {
-        const response = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: {
-            'Accept': 'application/json'   // importante para Formspree
-          },
-          redirect: 'follow'
-        });
+        try {
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' },
+            redirect: 'follow'
+          });
 
-        // Logging para depuración
-        console.log('Fetch response status:', response.status);
-        // Intentamos parsear JSON si lo hay
-        let body = null;
-        try { body = await response.json(); console.log('Response JSON:', body); } catch(e) { /* no JSON */ }
+          let body = null;
+          try { body = await response.json(); } catch(e) {}
 
-        // Aceptamos respuestas OK (200-299). Formspree debería devolver 200 con Accept:application/json
-        if (response.ok) {
-          // Ocultar formulario y el texto introductorio
-          form.style.display = "none";
-          const introText = document.querySelector(".contacto-contenido p");
-          if (introText) introText.style.display = "none";
+          if (response.ok) {
+            form.style.display = "none";
+            const introText = document.querySelector(".contacto-contenido p");
+            if (introText) introText.style.display = "none";
 
-          // Mostrar mensaje de éxito con botón que redirige limpiamente
-          status.innerHTML = `
-            <div class="success-message">
-              <p>✅ ¡Tu mensaje fue enviado! Gracias por contactarte conmigo.</p>
-              <button id="back-home-btn" class="back-home-btn">Volver al inicio</button>
-            </div>
-          `;
-          status.classList.add('success');
+            status.innerHTML = `
+              <div class="success-message">
+                <p>✅ ¡Tu mensaje fue enviado! Gracias por contactarte conmigo.</p>
+                <button id="back-home-btn" class="back-home-btn">Volver al inicio</button>
+              </div>
+            `;
+            status.classList.add('success');
 
-          // Añadimos el handler al botón (ya existe porque acabamos de insertar el HTML)
-          const backBtn = document.getElementById("back-home-btn");
-          if (backBtn) {
-            backBtn.addEventListener("click", () => {
-              // redirección limpia, fuerza carga de index.html
-              window.location.href = "index.html";
-            });
+            const backBtn = document.getElementById("back-home-btn");
+            if (backBtn) {
+              backBtn.addEventListener("click", () => {
+                window.location.href = "index.html";
+              });
+            }
+
+            form.reset();
+          } else {
+            const errorText = (body && (body.error || body.message)) ? (body.error || body.message) : "Ocurrió un error inesperado.";
+            status.textContent = "❌ " + errorText;
+            status.classList.add('error');
           }
-
-          // limpiar form por si acaso
-          form.reset();
-        } else {
-          // Mostrar detalle si viene en body
-          const errorText = (body && (body.error || body.message)) ? (body.error || body.message) : "Ocurrió un error inesperado.";
-          status.textContent = "❌ " + errorText;
+        } catch (err) {
+          status.textContent = "❌ No se pudo enviar. Revisá tu conexión a internet.";
           status.classList.add('error');
-          console.error('Formspree response not OK:', response.status, body);
         }
+      });
+    })();
+  </script>
 
-      } catch (err) {
-        // Error de red / CORS / etc.
-        status.textContent = "❌ No se pudo enviar. Revisa la consola del navegador.";
-        status.classList.add('error');
-        console.error('Fetch error:', err);
-      }
-    });
-  })();
-</script>
-
-<script src="/scripts.js"></script>
-
-<script>
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('nav');
-
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-</script>
+  <script src="/scripts.js"></script>
 
 </body>
 </html>
