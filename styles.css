@@ -990,6 +990,10 @@ footer .footer-about a:hover {
     width: 160px;
   }
 
+  .search-bar input {
+    font-size: 0.78rem;
+  }
+
   nav {
     right: 1rem;
   }
@@ -1030,7 +1034,7 @@ footer .footer-about a:hover {
   .projects-hint {
     display: block;
     text-align: center;
-    margin: 0 0 28px 0;
+    margin: 32px 0 28px 0;
   }
 
   .ducklas-hint {
