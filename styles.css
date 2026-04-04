@@ -18,6 +18,7 @@
 /* ==== BASE ==== */
 html, body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -979,6 +980,10 @@ footer .footer-about a:hover {
     display: inline;
   }
 
+  .logo {
+    font-size: 1.5rem;
+  }
+
   .search-bar {
     width: 160px;
   }
@@ -1126,10 +1131,6 @@ footer .footer-about a:hover {
 @media (max-width: 480px) {
   header {
     padding: 0.8rem 1rem;
-  }
-
-  .logo {
-    font-size: 1rem;
   }
 
   .titulo-bienvenida {
