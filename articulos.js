@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "La tétrada elemental",
+    descripcion: "Un principio clave del diseño de videojuegos.",
+    fecha: "2026-04-12",
+    url: "articles/la-tetrada-elemental.html",
+    tag: "Homenaje",
+    thumb: "images/thumbnail-images/Video-Game-Controller-Barnstar.png",
+  },
+  {
     titulo: "Recordando a la mítica LucasArts",
     descripcion: "Mi pequeño homenaje a una compañía legendaria.",
     fecha: "2026-03-22",
