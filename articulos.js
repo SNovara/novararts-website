@@ -7,7 +7,7 @@ const articulos = [
     fecha: "2026-04-18",
     url: "articles/rescatando-recuerdos-skifree.html",
     tag: "Ensayo",
-    thumb: "images/thumbnail-images/SkiFree-Thumbnail.png",
+    thumb: "images/thumbnail-images/SkiFree-Icon.gif",
   },
   {
     titulo: "La tétrada elemental",
