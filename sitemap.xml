@@ -4,39 +4,135 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
+  <!-- Páginas principales -->
+  <url>
+    <loc>https://novararts.com.ar/</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articulos.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/proyectos.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/sobre.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/contacto.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>0.50</priority>
+  </url>
 
-<url>
-  <loc>https://novararts.com.ar/</loc>
-  <lastmod>2025-11-26T22:09:51+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://novararts.com.ar/index.html</loc>
-  <lastmod>2025-11-26T22:09:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://novararts.com.ar/articulos.html</loc>
-  <lastmod>2025-11-26T22:09:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://novararts.com.ar/proyectos.html</loc>
-  <lastmod>2025-11-26T22:09:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://novararts.com.ar/contacto.html</loc>
-  <lastmod>2025-11-26T22:09:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://novararts.com.ar/sobre.html</loc>
-  <lastmod>2025-11-26T22:09:51+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+  <!-- Artículos -->
+  <url>
+    <lastmod>2026-04-17</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/la-tetrada-elemental.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/recordando-a-lucasarts.html</loc>
+    <lastmod>2026-03-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/el-curioso-caso-de-captain-toad.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/rayman-anniversary-edition.html</loc>
+    <lastmod>2026-02-13</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/rescatando-recuerdos-creative-writer.html</loc>
+    <lastmod>2026-02-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/el-desarrollo-de-ducklas.html</loc>
+    <lastmod>2026-01-20</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/el-dilema-de-la-diferenciacion.html</loc>
+    <lastmod>2026-01-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/el-encanto-del-mundo-analogico.html</loc>
+    <lastmod>2026-01-06</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/la-ensenanza-de-majora.html</loc>
+    <lastmod>2025-12-23</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/resena-metroid-prime-beyond.html</loc>
+    <lastmod>2025-12-22</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/nuevo-mega-man-anunciado.html</loc>
+    <lastmod>2025-12-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/las-mejores-canciones-de-videojuegos.html</loc>
+    <lastmod>2025-12-05</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/la-coleccion-que-perdi.html</loc>
+    <lastmod>2025-11-26</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/10-juegos-que-faltan-en-switch.html</loc>
+    <lastmod>2025-11-23</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/articles/la-crisis-oculta-de-nintendo.html</loc>
+    <lastmod>2025-11-20</lastmod>
+    <priority>0.80</priority>
+  </url>
 
+  <!-- Proyectos -->
+  <url>
+    <loc>https://novararts.com.ar/projects/Ducklas/index.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/projects/Ducklas/ducklas-el-juego.html</loc>
+    <lastmod>2026-04-18</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/projects/Ducklas/ducklas-gdd.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://novararts.com.ar/projects/Ducklas/ducklas-el-guion.html</loc>
+    <lastmod>2026-04-14</lastmod>
+    <priority>0.70</priority>
+  </url>
 
 </urlset>
