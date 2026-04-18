@@ -2,11 +2,19 @@
 
 const articulos = [
   {
+    titulo: "Rescatando recuerdos N° 2: Creative Writer",
+    descripcion: "Un hermoso y traumático recuerdo.",
+    fecha: "2026-04-18",
+    url: "articles/rescatando-recuerdos-skifree.html",
+    tag: "Ensayo",
+    thumb: "images/thumbnail-images/SkiFree-Thumbnail.png",
+  },
+  {
     titulo: "La tétrada elemental",
     descripcion: "Un principio clave del diseño de videojuegos.",
     fecha: "2026-04-12",
     url: "articles/la-tetrada-elemental.html",
-    tag: "Ensayo",
+    tag: "Análisis",
     thumb: "images/thumbnail-images/Video-Game-Controller-Barnstar.png",
   },
   {
