@@ -6,7 +6,7 @@ const articulos = [
     descripcion: "Un hermoso y traumático recuerdo.",
     fecha: "2026-04-18",
     url: "articles/rescatando-recuerdos-skifree.html",
-    tag: "Ensayo",
+    tag: "Nostalgia",
     thumb: "images/thumbnail-images/SkiFree-Icon.gif",
   },
   {
