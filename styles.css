@@ -155,8 +155,8 @@ nav a.active {
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 2rem 3rem;
-  align-items: start;
+  padding: 2rem 2rem 2rem;
+  align-items: stretch;
 }
 
 /* ==== INICIO: caja de bienvenida ==== */
@@ -164,11 +164,13 @@ nav a.active {
   text-align: justify;
   line-height: 1.6;
   font-size: 1.1em;
-  padding: 2.5rem;
+  padding: 2.5rem 2.5rem 1.2rem;
   border-radius: 12px;
   border: 1px solid #ddd;
   box-shadow: 0 4px 14px rgba(0,0,0,0.08);
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .texto-inicio p {
@@ -193,6 +195,8 @@ nav a.active {
 .inicio-ultimos {
   padding: 0;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .inicio-ultimos h2 {
@@ -272,7 +276,8 @@ nav a.active {
 
 .inicio-ver-todos {
   display: inline-block;
-  margin-top: 1rem;
+  margin-top: auto;
+  padding-top: 0.4rem;
   color: var(--red);
   font-weight: 700;
   text-decoration: none;
@@ -776,12 +781,21 @@ footer .footer-about a:hover {
 }
 
 /* ==== NOTAS EDITORIALES ==== */
-.texto-inicio .nota-editorial {
+.nota-editorial {
   font-size: 0.70rem;
   line-height: 1.4;
   color: #777;
-  margin: 51px auto -25px auto;
   text-align: justify;
+}
+
+.nota-editorial--mobile {
+  display: none;
+}
+
+.nota-editorial--desktop {
+  display: block;
+  margin-top: auto;
+  padding-top: 0.4rem;
 }
 
 .articulo-completo .nota-editorial {
@@ -951,7 +965,28 @@ footer .footer-about a:hover {
 
   .inicio-columnas {
     grid-template-columns: 1fr;
-    padding: 0.5rem 1.4rem 2.5rem;
+    padding: 0.5rem 1.4rem 1rem;
+  }
+
+  .texto-inicio {
+    order: 1;
+  }
+
+  .inicio-ultimos {
+    order: 2;
+  }
+
+  .nota-editorial--mobile {
+    order: 3;
+    grid-column: 1;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 0.65rem;
+  }
+
+  .nota-editorial--desktop {
+    display: none;
   }
 
   .texto-inicio {
@@ -1059,7 +1094,7 @@ footer .footer-about a:hover {
 /* Móviles estándar (≤ 660px) */
 @media (max-width: 660px) {
   .inicio-columnas {
-    padding: 0.5rem 1.5rem 2rem;
+    padding: 0.5rem 1.5rem 0.8rem;
   }
 
   .texto-inicio {
@@ -1068,9 +1103,10 @@ footer .footer-about a:hover {
     box-shadow: none;
   }
 
-  .texto-inicio .nota-editorial {
-    font-size: 0.75rem;
-    margin-bottom: 12px;
+  .nota-editorial {
+    font-size: 0.68rem;
+    margin-top: -0.3rem;
+    margin-bottom: 8px;
   }
 
   .articulos-grid {
