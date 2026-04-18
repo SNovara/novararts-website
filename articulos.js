@@ -3,7 +3,7 @@
 const articulos = [
   {
     titulo: "Rescatando recuerdos N° 2: SkiFree",
-    descripcion: "Un hermoso y traumático recuerdo.",
+    descripcion: "Una hermosa y traumática experiencia.",
     fecha: "2026-04-18",
     url: "articles/rescatando-recuerdos-skifree.html",
     tag: "Nostalgia",
