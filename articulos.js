@@ -2,7 +2,7 @@
 
 const articulos = [
   {
-    titulo: "Rescatando recuerdos N° 2: Creative Writer",
+    titulo: "Rescatando recuerdos N° 2: SkiFree",
     descripcion: "Un hermoso y traumático recuerdo.",
     fecha: "2026-04-18",
     url: "articles/rescatando-recuerdos-skifree.html",
