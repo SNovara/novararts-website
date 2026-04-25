@@ -3,7 +3,7 @@
 // ============================================================
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, query, orderBy, serverTimestamp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
+import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc, query, orderBy, serverTimestamp, updateDoc, increment } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBm98M_ZYVwa1HLDsmQ2DDdcDu11vau8FQ",
@@ -96,6 +96,9 @@ function crearElementoComentario(comentario, respuestas = []) {
     ? `<button class="comentario-btn-borrar" data-id="${comentario.id}" title="Borrar comentario">✕</button>`
     : "";
 
+  const yaLiked = localStorage.getItem(`like_${comentario.id}`) === "1";
+  const likesCount = comentario.likes || 0;
+
   div.innerHTML = `
     <div class="comentario-cabecera">
       <span class="comentario-autor">${escapeHTML(comentario.nombre)}</span>
@@ -103,7 +106,12 @@ function crearElementoComentario(comentario, respuestas = []) {
       ${adminBtn}
     </div>
     <p class="comentario-texto">${escapeHTML(comentario.texto)}</p>
-    <button class="comentario-btn-responder" data-id="${comentario.id}">Responder</button>
+    <div class="comentario-acciones">
+      <button class="comentario-btn-responder" data-id="${comentario.id}">Responder</button>
+      <button class="comentario-btn-like ${yaLiked ? 'liked' : ''}" data-id="${comentario.id}">
+        ♥ <span class="like-count">${likesCount > 0 ? likesCount : ''}</span>
+      </button>
+    </div>
     <div class="comentario-form-respuesta" id="respuesta-form-${comentario.id}" style="display:none;">
       <input type="text" class="respuesta-nombre" placeholder="Tu nombre" maxlength="50">
       <textarea class="respuesta-texto" placeholder="Escribí tu respuesta..." maxlength="1000"></textarea>
@@ -126,6 +134,8 @@ function crearElementoComentario(comentario, respuestas = []) {
     const respDiv = document.createElement("div");
     respDiv.className = "comentario-item comentario-respuesta";
     respDiv.dataset.id = respuesta.id;
+    const yaLikedResp = localStorage.getItem(`like_${respuesta.id}`) === "1";
+    const likesResp = respuesta.likes || 0;
     respDiv.innerHTML = `
       <div class="comentario-cabecera">
         <span class="comentario-autor">${escapeHTML(respuesta.nombre)}</span>
@@ -133,11 +143,58 @@ function crearElementoComentario(comentario, respuestas = []) {
         ${adminBtnResp}
       </div>
       <p class="comentario-texto">${escapeHTML(respuesta.texto)}</p>
+      <div class="comentario-acciones">
+        <button class="comentario-btn-like ${yaLikedResp ? 'liked' : ''}" data-id="${respuesta.id}">
+          ♥ <span class="like-count">${likesResp > 0 ? likesResp : ''}</span>
+        </button>
+      </div>
     `;
     contenedorRespuestas.appendChild(respDiv);
   });
 
   return div;
+}
+
+// ==== Toggle like en un comentario ====
+async function toggleLike(id, boton) {
+  if (boton.dataset.processing === "1") return;
+  boton.dataset.processing = "1";
+
+  const yaLiked = localStorage.getItem(`like_${id}`) === "1";
+  const span = boton.querySelector(".like-count");
+  const actual = parseInt(span.textContent) || 0;
+
+  // Actualizar UI inmediatamente (optimistic update)
+  if (yaLiked) {
+    localStorage.removeItem(`like_${id}`);
+    boton.classList.remove("liked");
+    span.textContent = actual - 1 > 0 ? actual - 1 : '';
+  } else {
+    localStorage.setItem(`like_${id}`, "1");
+    boton.classList.add("liked");
+    span.textContent = actual + 1;
+  }
+
+  // Luego sincronizar con Firestore
+  try {
+    await updateDoc(doc(db, "comentarios", articuloId, "items", id), {
+      likes: increment(yaLiked ? -1 : 1)
+    });
+  } catch (e) {
+    // Revertir si falla
+    if (yaLiked) {
+      localStorage.setItem(`like_${id}`, "1");
+      boton.classList.add("liked");
+      span.textContent = actual;
+    } else {
+      localStorage.removeItem(`like_${id}`);
+      boton.classList.remove("liked");
+      span.textContent = actual > 0 ? actual : '';
+    }
+    console.error("Error al actualizar like:", e);
+  }
+
+  delete boton.dataset.processing;
 }
 
 // ==== Escape de HTML para seguridad ====
@@ -236,6 +293,12 @@ function agregarEventListeners() {
         if (estado) estado.textContent = "";
         await cargarComentarios();
       }
+    }
+
+    // Dar like
+    if (e.target.closest(".comentario-btn-like")) {
+      const boton = e.target.closest(".comentario-btn-like");
+      await toggleLike(boton.dataset.id, boton);
     }
 
     // Borrar comentario (admin)
