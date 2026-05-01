@@ -2,12 +2,12 @@
 
 const articulos = [
   {
-    titulo: "A Vampyre Story: una aventura gráfica perdida.",
+    titulo: "A Vampyre Story: una aventura gráfica perdida",
     descripcion: "Un juego con potencial que cayó en el olvido.",
     fecha: "2026-05-01",
     url: "articles/a-vampyre-story-una-aventura-grafica-perdida.html",
     tag: "Crónica",
-    thumb: "images/thumbnail-images/A-Vampyre-Story-Cover-Art.jpeg",
+    thumb: "images/thumbnail-images/A-Vampyre-Story-Cover-Art.jpg",
   },
   {
     titulo: "Rescatando recuerdos N° 2: SkiFree",
