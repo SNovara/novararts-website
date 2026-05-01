@@ -681,6 +681,16 @@ footer .footer-about a:hover {
   text-align: justify;
 }
 
+.articulo-completo article ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.articulo-completo article ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
 .articulo-completo h2 {
   margin-top: 40px;
   font-size: 1.2rem;
