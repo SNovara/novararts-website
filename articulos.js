@@ -8,6 +8,7 @@ const articulos = [
     url: "articles/a-vampyre-story-una-aventura-grafica-perdida.html",
     tag: "Crónica",
     thumb: "images/thumbnail-images/A-Vampyre-Story-Cover-Art.jpg",
+    thumbBg: "#000",
   },
   {
     titulo: "Rescatando recuerdos N° 2: SkiFree",
