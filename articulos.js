@@ -7,7 +7,7 @@ const articulos = [
     fecha: "2026-05-08",
     url: "articles/star-fox-64-regresa-por-cuarta-vez.html",
     tag: "Noticia",
-    thumb: "images/thumbnail-images/Star-Fox-2026-Cover.jpeg",
+    thumb: "images/thumbnail-images/Star-Fox-2026-Cover.jpg",
   },
   {
     titulo: "A Vampyre Story: una aventura gráfica perdida",
