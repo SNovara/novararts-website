@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "Star Fox 64 regresa por cuarta vez",
+    descripcion: "La historia vuelve a contarse para la Switch 2.",
+    fecha: "2026-05-08",
+    url: "articles/star-fox-64-regresa-por-cuarta-vez.html",
+    tag: "Noticia",
+    thumb: "images/thumbnail-images/Star-Fox-2026-Cover.jpeg",
+  },
+  {
     titulo: "A Vampyre Story: una aventura gráfica perdida",
     descripcion: "Un juego con potencial que cayó en el olvido.",
     fecha: "2026-05-01",
