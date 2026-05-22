@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "¿Por qué hay tantos ports, remakes y remasters?",
+    descripcion: "El trasfondo de una tendencia al pasado.",
+    fecha: "2026-05-22",
+    url: "articles/ports-remakes-y-remasters.html",
+    tag: "Análisis",
+    thumb: "images/thumbnail-images/Remakes-Cover.jpeg",
+  },
+  {
     titulo: "Star Fox 64 regresa por cuarta vez",
     descripcion: "La historia vuelve a contarse para la Switch 2.",
     fecha: "2026-05-08",
