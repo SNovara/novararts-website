@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "5 curiosidades sobre el mundo de los videojuegos",
+    descripcion: "Un listado de 5 anécdotas poco conocidas.",
+    fecha: "2026-05-31",
+    url: "articles/5-curiosidades-sobre-videojuegos.html",
+    tag: "Curiosidad",
+    thumb: "images/thumbnail-images/Joystick.png",
+  },
+  {
     titulo: "¿Por qué hay tantos ports, remakes y remasters?",
     descripcion: "El trasfondo de una tendencia al pasado.",
     fecha: "2026-05-22",
