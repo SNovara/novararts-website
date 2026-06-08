@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "¡Spyro: A Realm Beyond llegará en 2027!",
+    descripcion: "Un esperadísimo regreso del dragón violeta.",
+    fecha: "2026-06-08",
+    url: "articles/spyro-a-realm-beyond-anunciado.html",
+    tag: "Noticia",
+    thumb: "images/thumbnail-images/Spyro-A-Realm-Beyond.png",
+    thumbBg: "#000",
+  {
     titulo: "5 curiosidades sobre el mundo de los videojuegos",
     descripcion: "Un listado de 5 anécdotas poco conocidas.",
     fecha: "2026-05-31",
