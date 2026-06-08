@@ -10,6 +10,7 @@ const articulos = [
     thumb: "images/thumbnail-images/Spyro-A-Realm-Beyond.png",
     thumbBg: "#000",
   },
+  {
     titulo: "5 curiosidades sobre el mundo de los videojuegos",
     descripcion: "Un listado de 5 anécdotas poco conocidas.",
     fecha: "2026-05-31",
