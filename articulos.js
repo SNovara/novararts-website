@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "Hablemos de Sam & Max: Freelance Police",
+    descripcion: "Un dúo extravagante y poco reconocido.",
+    fecha: "2026-06-18",
+    url: "articles/hablemos-de-sam-and-max.html",
+    tag: "Homenaje",
+    thumb: "images/thumbnail-images/Sam-&-Max-Cover.jpg",
+  },
+  {
     titulo: "¡Spyro: A Realm Beyond llegará en 2027!",
     descripcion: "Un esperadísimo regreso del dragón violeta.",
     fecha: "2026-06-08",
