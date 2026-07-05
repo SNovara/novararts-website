@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "Computadoras o consolas: ¿qué es mejor?",
+    descripcion: "Mi análisis de un debate amistoso.",
+    fecha: "2026-07-05",
+    url: "articles/computadoras-o-consolas.html",
+    tag: "Opinión",
+    thumb: "images/thumbnail-images/Computer.png",
+  },
+  {
     titulo: "Hablemos de Sam & Max: Freelance Police",
     descripcion: "Un dúo extravagante y poco reconocido.",
     fecha: "2026-06-18",
