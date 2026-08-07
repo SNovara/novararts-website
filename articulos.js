@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "Retro-reseña de Phoenix Wright: Ace Attorney Trilogy",
+    descripcion: "Una compilación imprescindible de novelas visuales.",
+    fecha: "2026-08-07",
+    url: "articles/retro-resena-ace-attorney-trilogy.html",
+    tag: "Reseña",
+    thumb: "images/thumbnail-images/Phoenix-Wright.jpeg",
+  },
+  {
     titulo: "Computadoras o consolas: ¿qué es mejor?",
     descripcion: "Mi análisis de un debate amistoso.",
     fecha: "2026-07-05",
