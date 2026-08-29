@@ -7,7 +7,7 @@ const articulos = [
     fecha: "2026-08-29",
     url: "articles/la-magia-del-d-pad.html",
     tag: "Ensayo",
-    thumb: "images/thumbnail-images/NES-D-Pad.jpeg",
+    thumb: "images/thumbnail-images/NES-D-Pad.jpg",
   },
   {
     titulo: "Retro-reseña de Phoenix Wright: Ace Attorney Trilogy",
