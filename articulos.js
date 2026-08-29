@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "El D-Pad: la magia de un mecanismo atemporal",
+    descripcion: "Uno de los primeros estándares de facto de la industria.",
+    fecha: "2026-08-29",
+    url: "articles/la-magia-del-d-pad.html",
+    tag: "Ensayo",
+    thumb: "images/thumbnail-images/NES-D-Pad.jpeg",
+  },
+  {
     titulo: "Retro-reseña de Phoenix Wright: Ace Attorney Trilogy",
     descripcion: "Una compilación imprescindible de novelas visuales.",
     fecha: "2026-08-07",
