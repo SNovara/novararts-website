@@ -6,7 +6,7 @@ const articulos = [
     descripcion: "Los anuncios más relevantes de esta semana.",
     fecha: "2026-09-12",
     url: "articles/los-bombazos-de-los-nintendo-directs.html",
-    tag: "Noticia",
+    tag: "Opinión",
     thumb: "images/thumbnail-images/Nintendo-Direct-Logo.png",
   },
   {
