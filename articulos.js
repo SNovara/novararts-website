@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "Los bombazos de los últimos Nintendo Directs",
+    descripcion: "Los anuncios más relevantes de esta semana.",
+    fecha: "2026-09-12",
+    url: "articles/los-bombazos-de-los-nintendo-directs.html",
+    tag: "Noticia",
+    thumb: "images/thumbnail-images/Nintendo-Direct-Logo.png",
+  },
+  {
     titulo: "El D-Pad: la magia de un mecanismo atemporal",
     descripcion: "Uno de los primeros estándares de facto de la industria.",
     fecha: "2026-08-29",
@@ -203,6 +211,6 @@ const articulos = [
     fecha: "2025-11-20",
     url: "articles/la-crisis-oculta-de-nintendo.html",
     tag: "Análisis",
-    thumb: "images/thumbnail-images/Nintendo-Switch-2-logo.png",
+    thumb: "images/thumbnail-images/Nintendo-Gray-Logo.png",
   },
 ];
