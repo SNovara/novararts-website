@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "Nintendo 64: 30 años de magnífica trayectoria",
+    descripcion: "La N64 cumple tres décadas.",
+    fecha: "2026-09-29",
+    url: "articles/nintendo-64-30-anos-de-trayectoria.html",
+    tag: "Homenaje",
+    thumb: "images/thumbnail-images/Nintendo-64-Logo.png",
+  },
+  {
     titulo: "Los bombazos de los últimos Nintendo Directs",
     descripcion: "Los anuncios más relevantes de esta semana.",
     fecha: "2026-09-12",
