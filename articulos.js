@@ -2,6 +2,15 @@
 
 const articulos = [
   {
+    titulo: "Rescatando recuerdos N° 3: Skullmonkeys",
+    descripcion: "La secuela perdida de un título olvidado.",
+    fecha: "2026-10-10",
+    url: "articles/rescatando-recuerdos-skullmonkeys.html",
+    tag: "Nostlagia",
+    thumb: "images/thumbnail-images/Skullmonkeys.jpg",
+    thumbBg: "#000",
+  },
+  {
     titulo: "Nintendo 64: 30 años de magnífica trayectoria",
     descripcion: "La N64 cumple tres décadas.",
     fecha: "2026-09-29",
