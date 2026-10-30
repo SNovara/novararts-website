@@ -8,6 +8,7 @@ const articulos = [
     url: "articles/mi-experiencia-con-VR.html",
     tag: "Opinión",
     thumb: "images/thumbnail-images/Virtual-Reality.jpg",
+  },
   {
     titulo: "Rescatando recuerdos N° 3: Skullmonkeys",
     descripcion: "La secuela perdida de un título olvidado.",
