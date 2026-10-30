@@ -4,10 +4,10 @@ const articulos = [
   {
     titulo: "Mi experiencia con VR",
     descripcion: "Pros y contras de un formato inmersivo.",
-    fecha: "2026-30-10",
+    fecha: "2026-10-30",
     url: "articles/mi-experiencia-con-VR.html",
     tag: "Opinión",
-    thumb: "images/thumbnail-images/Virtual-Reality.jpg",
+    thumb: "images/thumbnail-images/Virtual-Reality.png",
   },
   {
     titulo: "Rescatando recuerdos N° 3: Skullmonkeys",
