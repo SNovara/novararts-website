@@ -13,7 +13,7 @@ const articulos = [
     descripcion: "La secuela perdida de un título olvidado.",
     fecha: "2026-10-10",
     url: "articles/rescatando-recuerdos-skullmonkeys.html",
-    tag: "Nostlagia",
+    tag: "Nostalgia",
     thumb: "images/thumbnail-images/Skullmonkeys.jpg",
     thumbBg: "#000",
   },
