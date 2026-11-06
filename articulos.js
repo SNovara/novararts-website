@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "Qué significan los videojuegos para mí",
+    descripcion: "Y por qué son tan importantes.",
+    fecha: "2026-11-06",
+    url: "articles/que-significan-los-videojuegos-para-mi.html",
+    tag: "Ensayo",
+    thumb: "images/thumbnail-images/Videogames-Imagination.png",
+  },
+  {
     titulo: "Mi experiencia con VR",
     descripcion: "Pros y contras de un formato inmersivo.",
     fecha: "2026-10-30",
