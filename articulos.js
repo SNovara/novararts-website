@@ -2,6 +2,14 @@
 
 const articulos = [
   {
+    titulo: "The Mummy Demastered: una joya ignorada",
+    descripcion: "Un metroidvania tan excelente como desconocido.",
+    fecha: "2026-11-18",
+    url: "articles/the-mummy-demastered-una-joya-ignorada.html",
+    tag: "Curiosidad",
+    thumb: "images/thumbnail-images/The-Mummy-Demastered.jpeg",
+  },
+  {
     titulo: "Qué significan los videojuegos para mí",
     descripcion: "Y por qué son tan importantes.",
     fecha: "2026-11-06",
